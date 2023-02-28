@@ -16,19 +16,16 @@ const Login = () => {
         <div className="w-full h-full flex flex-col justify-between p-5">
           <div className="w-full flex justify-center items-center">
             <div className="w-[98%]">
-              <Link
-                to="/"
-                className="w-max flex items-center gap-2 select-none"
-              >
+              <Link to="/" className="flex items-center gap-3 select-none">
                 <img className="w-14" src={Logo} alt="Logo page" />
-                <h1 className="text-3xl font-bold">UNILIX</h1>
+                <h1 className="text-2xl sm:text-3xl font-bold">IEEE UNHEVAL</h1>
               </Link>
             </div>
           </div>
           <div className="w-full flex justify-center">
             <div className="w-full max-w-sm flex flex-col gap-8">
               <div>
-                <h2 className="text-3xl font-bold text-center xl:text-left">
+                <h2 className="text-4xl font-bold text-center xl:text-left">
                   ¡Bienvenid@!
                 </h2>
               </div>
@@ -36,12 +33,15 @@ const Login = () => {
                 <form action="" onSubmit={handleSubmit}>
                   <div className="flex flex-col gap-3">
                     <div className="">
-                      <label htmlFor="email" className="text-sm font-semibold">
+                      <label
+                        htmlFor="email"
+                        className="text-base font-semibold"
+                      >
                         Email
                       </label>
                       <div className="relative mt-1">
                         <input
-                          className="placeholder:text-zinc-400 text-sm tracking-wider bg-black/5 w-full rounded-md py-2.5 px-4 focus:outline-none focus:border-teal-500 focus:ring-teal-500 focus:ring-2 ease-out duration-200"
+                          className="input"
                           placeholder="Introduce tu email"
                           type="email"
                           name="email"
@@ -51,12 +51,15 @@ const Login = () => {
                       </div>
                     </div>
                     <div className="">
-                      <label htmlFor="passw" className="text-sm font-semibold">
+                      <label
+                        htmlFor="passw"
+                        className="text-base font-semibold"
+                      >
                         Contraseña
                       </label>
                       <div className="relative mt-1">
                         <input
-                          className="placeholder:text-zinc-400 text-sm tracking-wider bg-black/5 w-full rounded-md py-2.5 pl-4 pr-10 focus:outline-none focus:border-teal-500 focus:ring-teal-500 focus:ring-2 ease-out duration-200"
+                          className="input"
                           placeholder="Introduce tu contraseña"
                           type={mostrarPass ? "password" : "text"}
                           name="passw"
@@ -100,20 +103,20 @@ const Login = () => {
               </div>
               <div className="flex flex-col gap-3">
                 <div>
-                  <button className="btn-login bg-[#32D4A4]">
+                  <button className="btn w-full bg-primary">
                     Iniciar sesión
                   </button>
                 </div>
                 <div>
-                  <button className="btn-login bg-black">
+                  <button className="btn w-full bg-black">
                     Registrar nueva cuenta
                   </button>
                 </div>
               </div>
             </div>
           </div>
-          <div className="text-center text-sm text-black/70">
-            Copyright © 2023 UNILIX Todos los derechos reservados.
+          <div className="text-center text-base text-colorTextSecundary">
+            Copyright © 2023 IEEE UNHEVAL Todos los derechos reservados.
           </div>
         </div>
         <div className="w-full h-full hidden xl:block">
