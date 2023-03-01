@@ -22,8 +22,8 @@ const Login = () => {
           <div className="w-full flex justify-center">
             <div className="w-full mini:w-96 flex flex-col gap-8">
               <div>
-                <h2 className="text-2xl font-bold text-center">
-                  ¡Bienvenido/a! Vamos a crear tu perfil
+                <h2 className="text-2xl font-bold text-center pt-3">
+                  ¡Bienvenid@! Vamos a crear tu perfil
                 </h2>
               </div>
               <div>
@@ -167,21 +167,22 @@ const Login = () => {
               </div>
               <div className="flex flex-col gap-3">
                 <div>
-                  <button className="btn w-full bg-primary">
-                    Iniciar sesión
+                  <button className="btn w-full bg-transparent text-blue-700 font-semibold py-2 px-4 border border-blue-500 hover:border-transparent rounded">
+                    Prefiero iniciar sesión
                   </button>
                 </div>
                 <div>
-                  <button className="btn w-full bg-black">
-                    Registrar nueva cuenta
+                  <button className="btn w-full bg-primary">
+                    Registrar cuenta
                   </button>
                 </div>
               </div>
             </div>
           </div>
-          <div className="text-center text-base text-colorTextSecundary">
+          <div className="text-center text-base text-colorTextSecundary pt-5 ">
             Copyright © 2023 IEEE UNHEVAL Todos los derechos reservados.
           </div>
+          <div className="pt-5 "></div>
         </div>
       </div>
     </div>

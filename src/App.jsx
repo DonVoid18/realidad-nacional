@@ -1,7 +1,7 @@
 import LayoutMain from "./layout/LayoutMain";
 import Home from "./pages/Home";
 import Login from "./pages/Login"
-import Regiter from "./pages/Register"
+import Register from "./pages/Register"
 import { Routes, Route } from "react-router-dom";
 const App = () => {
   return (
@@ -10,7 +10,7 @@ const App = () => {
         <Route index element={<Home />}></Route>
       </Route>
       <Route path="/login" element={<Login/>}></Route>
-      <Route path="/register" element={<Regiter/>}></Route>
+      <Route path="/register" element={<Register/>}></Route>
     </Routes>
   );
 };
