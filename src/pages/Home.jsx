@@ -2,10 +2,10 @@ import ImagenPerson from "/imagenPerson.webp";
 import Person from "../assets/person.jpg";
 import { Link } from "react-router-dom";
 import ImagenTeam2 from "../assets/team2.svg";
-import Unheval from "../assets/unheval.png";
-import IeeeLogo from "../assets/IEEE_logo.png";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBook, fa1, fa2, fa3 } from "@fortawesome/free-solid-svg-icons";
+import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
+import { Carousel } from "react-responsive-carousel";
 function Home() {
   return (
     <div className="w-full flex-col flex items-center justify-center text-left sm:text-center xl:text-left overflow-hidden">
@@ -93,10 +93,10 @@ function Home() {
           <div className="">
             <div>
               <h1 className="text-5xl font-bold tracking-tight leading-12 md:text-6xl md:leading-12">
-                ¡Únete a nuestra rama estudiantil{" "}
+                ¡Únete a la rama estudiantil{" "}
                 <span className="bg-clip-text text-transparent bg-gradient-to-r from-green-400 to-blue-500">
                   IEEE UNHEVAL 2023
-                </span>{" "}
+                </span>
                 !
               </h1>
             </div>
@@ -138,14 +138,31 @@ function Home() {
             </Link>
           </div>
           <div className="w-full flex justify-center">
-            <div className="w-full h-96 max-w-2xl flex flex-col justify-center items-center gap-5 bg-white p-5 rounded-3xl hover:shadow-3xl ease-out duration-200">
+            <div className="w-full max-w-2xl flex flex-col justify-center items-center gap-5">
               <div className="flex flex-col justify-center items-center gap-5">
-                <div>
-                  <img className="w-52" src={IeeeLogo} alt="IEEE logo" />
-                </div>
-                <div>
-                  <img className="w-72" src={Unheval} alt="UNHEVAL logo" />
-                </div>
+                <Carousel infiniteLoop autoPlay>
+                  <div className="relative h-[300px]">
+                    <img
+                      src="https://i.ibb.co/SxvT5yQ/imagen2.jpg"
+                      alt="Image 2"
+                      className="w-full h-full object-cover"
+                    />
+                  </div>
+                  <div className="relative h-[300px]">
+                    <img
+                      src="https://i.ibb.co/W3mQg06/imagen1.jpg"
+                      alt="Image 3"
+                      className="w-full h-full object-cover"
+                    />
+                  </div>
+                  <div className="relative h-[300px]">
+                    <img
+                      src="https://i.ibb.co/KGSRR2q/Proyecto-nuevo-1.jpg"
+                      alt="Image 3"
+                      className="w-full h-full object-cover"
+                    />
+                  </div>
+                </Carousel>
               </div>
             </div>
           </div>

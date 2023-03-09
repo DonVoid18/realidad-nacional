@@ -2,9 +2,14 @@ import { useState } from "react";
 import Logo from "/logo.svg";
 import BtnBurger from "./buttonsToggle/BtnBurger";
 import BtnClosed from "./buttonsToggle/BtnClosed";
-import { Link } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 const DashHeader = () => {
   const [toggleMenu, setToggleMenu] = useState(false);
+  const linkActive = () => {
+    return ({ isActive }) => (isActive ? "link text-primary" : "link");
+  };
+  const menu = ["Conocenos", "Eventos", "Noticias", "Miembros"];
+
   return (
     <>
       <div className="text-header z-10 w-full h-header flex justify-center items-center fixed top-0 bg-white">
@@ -19,26 +24,16 @@ const DashHeader = () => {
           <div className="hidden xl:block">
             <nav>
               <ul className="flex gap-10">
-                <li>
-                  <Link to="" className="link">
-                    Beneficios
-                  </Link>
-                </li>
-                <li>
-                  <Link to="" className="link">
-                    ¿Cómo ser miembro?
-                  </Link>
-                </li>
-                <li>
-                  <Link to="" className="link">
-                    Eventos
-                  </Link>
-                </li>
-                <li>
-                  <Link to="" className="link">
-                    Noticias
-                  </Link>
-                </li>
+                {menu.map((item, index) => (
+                  <li key={index}>
+                    <NavLink
+                      to={`/${item.toLowerCase()}`}
+                      className={linkActive()}
+                    >
+                      {item}
+                    </NavLink>
+                  </li>
+                ))}
               </ul>
             </nav>
           </div>
@@ -46,20 +41,18 @@ const DashHeader = () => {
             <nav>
               <ul className="flex gap-4">
                 <li>
-                  <Link
-                    className="btn bg-btnColorSecondary"
-                    to="/login"
-                  >
-                    Ir al campus
+                  <Link className="btn bg-btnColorSecondary" to="/login">
+                    Empieza ya
                   </Link>
                 </li>
                 <li>
-                  <Link
+                  <a
                     className="btn bg-primary"
-                    to="/register"
+                    href="https://www.ieee.org/"
+                    target="_blank"
                   >
-                    Empieza ya
-                  </Link>
+                    IEEE Oficial
+                  </a>
                 </li>
               </ul>
             </nav>
@@ -85,26 +78,16 @@ const DashHeader = () => {
           <div>
             <nav>
               <ul className="flex gap-10 flex-col justify-center items-center">
-                <li>
-                  <Link to="" className="link">
-                    Beneficios
-                  </Link>
-                </li>
-                <li>
-                  <Link to="" className="link">
-                    ¿Cómo ser miembro?
-                  </Link>
-                </li>
-                <li>
-                  <Link to="" className="link">
-                    Eventos
-                  </Link>
-                </li>
-                <li>
-                  <Link to="" className="link">
-                    Noticias
-                  </Link>
-                </li>
+                {menu.map((item, index) => (
+                  <li key={index}>
+                    <NavLink
+                      to={`/${item.toLowerCase()}`}
+                      className={linkActive()}
+                    >
+                      {item}
+                    </NavLink>
+                  </li>
+                ))}
               </ul>
             </nav>
           </div>
@@ -116,7 +99,7 @@ const DashHeader = () => {
                     className="btn block text-center bg-btnColorSecondary hover:opacity-70"
                     to="/login"
                   >
-                    Ir al campus
+                    Empieza ya
                   </Link>
                 </li>
                 <li>
@@ -124,7 +107,7 @@ const DashHeader = () => {
                     className="btn block text-center bg-primary hover:opacity-70"
                     to="/register"
                   >
-                    Empieza ya
+                    Facebook
                   </Link>
                 </li>
               </ul>

@@ -26,6 +26,7 @@ module.exports = {
       width: {
         containerWitdh: "95%",
         containerWitdhMain: "85%",
+        containerWitdhMain_2: "75%",
       },
       height: {
         header: "6rem",
