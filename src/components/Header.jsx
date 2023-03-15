@@ -103,12 +103,13 @@ const DashHeader = () => {
                   </Link>
                 </li>
                 <li>
-                  <Link
-                    className="btn block text-center bg-primary hover:opacity-70"
-                    to="/register"
+                  <a
+                    className="btn bg-primary block text-center"
+                    href="https://www.ieee.org/"
+                    target="_blank"
                   >
-                    Facebook
-                  </Link>
+                    IEEE Oficial
+                  </a>
                 </li>
               </ul>
             </nav>
