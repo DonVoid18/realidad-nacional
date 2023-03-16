@@ -5,9 +5,9 @@ const Conocenos = () => {
     <div className="w-full min-h-screen mt-24 flex flex-col items-center overflow-hidden text-main">
       {/* section */}
       <section className="max-w-containerMax flex justify-center items-center pt-32">
-        <div className="w-containerWitdhMain flex flex-col gap-10">
+        <div className="w-containerWitdhMain_2 flex flex-col gap-10">
           <div className="flex flex-col gap-10 items-center justify-center text-center">
-            <h2 className="text-6xl font-bold">¿Quiénes somos?</h2>
+            <h2 className="text-5xl font-bold">¿Quiénes somos?</h2>
             <p className="text-colorTextSecundary">
               Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quia
               iste dolor voluptatum voluptates ab porro ratione earum ad aliquam
@@ -30,10 +30,10 @@ const Conocenos = () => {
       </section>
       <section className="max-w-containerMax flex justify-center items-center py-24">
         <div className="max-w-containerMax flex justify-center items-center">
-          <div className="w-containerWitdhMain flex flex-col gap-24">
+          <div className="w-containerWitdhMain_2 flex flex-col gap-24">
             <div className="grid md:grid-cols-2 gap-10">
               <div className="flex flex-col gap-5">
-                <h2 className="text-5xl font-bold">Misión</h2>
+                <h2 className="text-4xl font-bold">Misión</h2>
                 <p className="text-colorTextSecundary">
                   Lorem ipsum dolor sit amet, consectetur adipisicing elit.
                   Incidunt ipsa, expedita dolor, odit distinctio, magnam
@@ -57,7 +57,7 @@ const Conocenos = () => {
                 </div>
               </div>
               <div className="order-1 md:order-2 md:text-right flex flex-col gap-5">
-                <h2 className="text-5xl font-bold">Objetivos</h2>
+                <h2 className="text-4xl font-bold">Objetivos</h2>
                 <p className="text-colorTextSecundary">
                   Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod
                   eaque optio sequi similique? Repudiandae alias cum illo?
