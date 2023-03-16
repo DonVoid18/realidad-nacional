@@ -107,11 +107,6 @@ const Login = () => {
                     Iniciar sesión
                   </button>
                 </div>
-                <div>
-                  <button className="btn w-full bg-black">
-                    Registrar nueva cuenta
-                  </button>
-                </div>
               </div>
             </div>
           </div>

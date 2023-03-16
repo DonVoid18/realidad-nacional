@@ -2,7 +2,7 @@ import MisionImage from "../assets/mision.svg";
 import ObjetivosImage from "../assets/objetivos.svg";
 const Conocenos = () => {
   return (
-    <div className="w-full min-h-screen mt-24 flex flex-col items-center overflow-hidden text-main">
+    <div className="w-full min-h-screen bg-colorSection_1 mt-24 flex flex-col items-center overflow-hidden text-main">
       {/* section */}
       <section className="max-w-containerMax flex justify-center items-center pt-32">
         <div className="w-containerWitdhMain_2 flex flex-col gap-10">

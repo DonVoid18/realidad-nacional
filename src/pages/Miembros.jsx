@@ -1,7 +1,7 @@
 import MembersList from "../components/MembersList";
 const Miembros = () => {
   return (
-    <div className="w-full min-h-screen pt-40 pb-24 flex flex-col items-center overflow-hidden text-main gap-20">
+    <div className="bg-colorSection_1 w-full min-h-screen pt-40 pb-24 flex flex-col items-center overflow-hidden text-main gap-20">
       <section className="w-containerWitdhMain max-w-containerMax flex justify-center items-center">
         <div className="w-full flex flex-col gap-10 text-center">
           <h1 className="text-5xl font-bold">Miembros</h1>

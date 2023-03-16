@@ -27,7 +27,7 @@
       @apply w-max rounded-md flex items-start gap-2 hover:text-white ease-out duration-200 focus:outline-none focus:ring-4 focus:ring-focusColor;
     }
     .input {
-      @apply placeholder:text-zinc-400 text-base tracking-wider bg-black/5 w-full rounded-md py-2.5 px-4 focus:outline-none focus:border-teal-500 focus:ring-teal-500 focus:ring-2 ease-out duration-200;
+      @apply placeholder:text-zinc-400 text-base tracking-wider bg-black/5 w-full rounded-md py-2.5 px-4 focus:outline-none focus:ring-focusColor focus:ring-2 ease-out duration-200;
     }
 }
 @tailwind utilities;
