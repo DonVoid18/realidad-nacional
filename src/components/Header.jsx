@@ -41,7 +41,7 @@ const DashHeader = () => {
             <nav>
               <ul className="flex gap-4">
                 <li>
-                  <Link className="btn bg-btnColorSecondary" to="/login">
+                  <Link className="btn bg-btnColorSecondary" to="/register">
                     Empieza ya
                   </Link>
                 </li>
@@ -97,7 +97,7 @@ const DashHeader = () => {
                 <li>
                   <Link
                     className="btn block text-center bg-btnColorSecondary hover:opacity-70"
-                    to="/login"
+                    to="/register"
                   >
                     Empieza ya
                   </Link>

@@ -30,7 +30,7 @@ const data = [
 import MemberCard from "./MemberCard";
 const MembersList = () => {
   return (
-    <div className="grid pt-5 grid-cols-1 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-5 justify-center items-center">
+    <div className="grid pt-5 grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-5 justify-center items-center">
       {data.map((member, index) => (
         <MemberCard
           key={index}
