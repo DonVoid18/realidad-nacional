@@ -2,17 +2,17 @@ import React from "react";
 import Logo from "/logo.svg";
 const DashFooter = () => {
   return (
-    <div className="w-full bg-colorSection_2 text-white py-24 flex justify-center items-center text-header">
-      <footer className="w-containerWitdhMain max-w-containerMax flex flex-col justify-center items-center max-[500px]:w-9/12">
-        <div className="w-full grid grid-cols-1 md:grid-cols-3 gap-10">
-          <div className="flex gap-2 items-start">
-              <div className="flex items-center gap-4">
+    <div className="flex w-full items-center justify-center bg-colorSection_2 py-24 text-header text-white">
+      <footer className="flex w-containerWitdhMain max-w-containerMax flex-col items-center justify-center max-[500px]:w-9/12">
+        <div className="grid w-full grid-cols-1 gap-10 md:grid-cols-3">
+          <div className="flex items-start gap-2">
+            <div className="flex items-center gap-4">
               <img className="w-12" src={Logo} alt="Logo page" />
               <h1 className="text-3xl font-bold">IEEE UNHEVAL</h1>
-              </div>
+            </div>
           </div>
           <div className="flex flex-col gap-5">
-            <div className="font-bold text-xl">Redes Sociales</div>
+            <div className="text-xl font-bold">Redes Sociales</div>
             <div>
               <ul className="flex flex-col gap-3 text-colorTextFooter">
                 <li>
@@ -67,7 +67,7 @@ const DashFooter = () => {
             </div>
           </div>
           <div className="flex flex-col gap-5">
-            <div className="font-bold text-xl">Políticas</div>
+            <div className="text-xl font-bold">Políticas</div>
             <div>
               <ul className="flex flex-col gap-3 text-colorTextFooter">
                 <li>

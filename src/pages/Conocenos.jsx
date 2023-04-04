@@ -3,11 +3,11 @@ import Vision from "../assets/vision.svg";
 import Objetivos from "../assets/objetivos.svg";
 const Conocenos = () => {
   return (
-    <div className="w-full min-h-screen bg-colorSection_1 mt-24 flex flex-col items-center overflow-hidden text-main">
+    <div className="mt-24 flex min-h-screen w-full flex-col items-center overflow-hidden bg-colorSection_1 text-main">
       {/* section */}
-      <section className="max-w-containerMax flex justify-center items-center pt-32">
-        <div className="w-containerWitdhMain_2 flex flex-col gap-10">
-          <div className="flex flex-col gap-10 items-center justify-center text-center">
+      <section className="flex max-w-containerMax items-center justify-center pt-32">
+        <div className="flex w-containerWitdhMain_2 flex-col gap-10">
+          <div className="flex flex-col items-center justify-center gap-10 text-center">
             <h2 className="text-6xl font-bold">
               Conoce a la rama estudiantil IEEE UNHEVAL 2023
             </h2>
@@ -23,22 +23,22 @@ const Conocenos = () => {
               apasionados por la ingeniería y la tecnología.
             </p>
           </div>
-          <div className="flex justify-center items-center">
-            <div className="w-full h-96">
+          <div className="flex items-center justify-center">
+            <div className="h-96 w-full">
               <img
                 src="https://i.ibb.co/SxvT5yQ/imagen2.jpg"
                 alt="Image 2"
-                className="w-full h-full object-cover"
+                className="h-full w-full object-cover"
               />
             </div>
           </div>
         </div>
       </section>
-      <section className="max-w-containerMax flex justify-center items-center pt-20">
-        <div className="w-containerWitdhMain_2 flex flex-col gap-10">
-          <div className="flex flex-col gap-5 items-start justify-center text-left">
+      <section className="flex max-w-containerMax items-center justify-center pt-20">
+        <div className="flex w-containerWitdhMain_2 flex-col gap-10">
+          <div className="flex flex-col items-start justify-center gap-5 text-left">
             <h2 className="text-4xl font-bold">Miembros fundadores</h2>
-            <p className="text-xl text-justify text-colorTextSecundary">
+            <p className="text-justify text-xl text-colorTextSecundary">
               Este equipo de trabajo está formado por líderes que comparten la
               visión y los objetivos de la rama estudiantil, trabajando siempre
               en equipo para llevar a cabo proyectos y actividades que
@@ -48,24 +48,24 @@ const Conocenos = () => {
               de la rama estudiantil.
             </p>
           </div>
-          <div className="flex justify-center items-center">
-            <div className="w-full h-96">
+          <div className="flex items-center justify-center">
+            <div className="h-96 w-full">
               <img
                 src="https://i.ibb.co/W3mQg06/imagen1.jpg"
                 alt="Image 2"
-                className="w-full h-full object-cover"
+                className="h-full w-full object-cover"
               />
             </div>
           </div>
         </div>
       </section>
-      <section className="max-w-containerMax flex justify-center items-center py-24">
-        <div className="max-w-containerMax flex justify-center items-center">
-          <div className="w-containerWitdhMain_2 flex flex-col gap-24">
-            <div className="grid xl:grid-cols-2 gap-10">
+      <section className="flex max-w-containerMax items-center justify-center py-24">
+        <div className="flex max-w-containerMax items-center justify-center">
+          <div className="flex w-containerWitdhMain_2 flex-col gap-24">
+            <div className="grid gap-10 xl:grid-cols-2">
               <div className="flex flex-col gap-5">
                 <h2 className="text-4xl font-bold">Misión</h2>
-                <p className="text-xl text-justify text-colorTextSecundary">
+                <p className="text-justify text-xl text-colorTextSecundary">
                   La misión de la Rama Estudiantil IEEE UNHEVAL es fomentar y
                   promover el desarrollo de habilidades, conocimientos y valores
                   en el campo de la ingeniería eléctrica, electrónica,
@@ -78,21 +78,21 @@ const Conocenos = () => {
                   tecnológico de la sociedad.
                 </p>
               </div>
-              <div className="w-full flex justify-center items-center">
+              <div className="flex w-full items-center justify-center">
                 <div className="w-5/6">
                   <img src={Mision} alt="Imagen misión" />
                 </div>
               </div>
             </div>
-            <div className="grid xl:grid-cols-2 gap-10">
-              <div className="order-2 xl:order-1 w-full flex justify-center items-center">
+            <div className="grid gap-10 xl:grid-cols-2">
+              <div className="order-2 flex w-full items-center justify-center xl:order-1">
                 <div className="w-5/6">
                   <img src={Vision} alt="Imagen visión" />
                 </div>
               </div>
-              <div className="order-1 xl:order-2 xl:text-right flex flex-col gap-5">
+              <div className="order-1 flex flex-col gap-5 xl:order-2 xl:text-right">
                 <h2 className="text-4xl font-bold">Visión</h2>
-                <p className="text-xl text-justify text-colorTextSecundary">
+                <p className="text-justify text-xl text-colorTextSecundary">
                   La visión de la rama estudiantil IEEE UNHEVAL es ser
                   reconocida como una comunidad líder en la promoción y
                   desarrollo de habilidades técnicas y profesionales en los
@@ -104,10 +104,10 @@ const Conocenos = () => {
                 </p>
               </div>
             </div>
-            <div className="grid xl:grid-cols-2 gap-10">
+            <div className="grid gap-10 xl:grid-cols-2">
               <div className="flex flex-col gap-5">
                 <h2 className="text-4xl font-bold">Objetivos</h2>
-                <p className="text-xl text-justify text-colorTextSecundary">
+                <p className="text-justify text-xl text-colorTextSecundary">
                   Los objetivos de la rama estudiantil IEEE UNHEVAL se enfocan
                   en fomentar el interés y el avance en las áreas de la
                   ingeniería eléctrica, electrónica, computacional y de
@@ -122,7 +122,7 @@ const Conocenos = () => {
                   en general.
                 </p>
               </div>
-              <div className="w-full flex justify-center items-center">
+              <div className="flex w-full items-center justify-center">
                 <div className="w-5/6">
                   <img src={Objetivos} alt="Imagen objetivos" />
                 </div>

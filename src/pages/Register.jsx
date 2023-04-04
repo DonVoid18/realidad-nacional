@@ -12,19 +12,19 @@ const Login = () => {
     setMostrarPass(!mostrarPass);
   };
   return (
-    <div className="w-full h-screen flex justify-center items-center">
+    <div className="flex h-screen w-full items-center justify-center">
       <div className="flex h-full">
-        <div className="w-full h-full flex flex-col justify-between p-5">
-          <div className="w-full flex justify-center items-center">
-            <Link to="/" className="flex items-center gap-3 select-none">
+        <div className="flex h-full w-full flex-col justify-between p-5">
+          <div className="flex w-full items-center justify-center">
+            <Link to="/" className="flex select-none items-center gap-3">
               <img className="w-14" src={Logo} alt="Logo page" />
-              <h1 className="text-2xl sm:text-3xl font-bold">IEEE UNHEVAL</h1>
+              <h1 className="text-2xl font-bold sm:text-3xl">IEEE UNHEVAL</h1>
             </Link>
           </div>
-          <div className="w-full flex justify-center">
-            <div className="w-full mini:w-96 flex flex-col gap-8">
+          <div className="flex w-full justify-center">
+            <div className="mini:w-96 flex w-full flex-col gap-8">
               <div>
-                <h2 className="text-2xl font-bold text-center pt-3">
+                <h2 className="pt-3 text-center text-2xl font-bold">
                   ¡Bienvenid@! Registra tus datos
                 </h2>
               </div>
@@ -148,7 +148,7 @@ const Login = () => {
               </div>
             </div>
           </div>
-          <div className="text-center text-base text-colorTextSecundary pt-5 ">
+          <div className="pt-5 text-center text-base text-colorTextSecundary ">
             Copyright © 2023 IEEE UNHEVAL Todos los derechos reservados.
           </div>
           <div className="pt-5 "></div>

@@ -2,9 +2,9 @@ import React from "react";
 
 const EventCard = ({ title, date, location, image }) => {
   return (
-    <div className="rounded-lg shadow-lg overflow-hidden transform hover:scale-105 transition duration-300 ease-in-out">
+    <div className="transform overflow-hidden rounded-lg shadow-lg transition duration-300 ease-in-out hover:scale-105">
       <img
-        className="w-full h-56 object-cover object-center"
+        className="h-56 w-full object-cover object-center"
         src={image}
         alt={title}
       />

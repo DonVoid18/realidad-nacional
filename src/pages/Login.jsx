@@ -13,21 +13,21 @@ const Login = () => {
     setMostrarPass(!mostrarPass);
   };
   return (
-    <div className="w-full h-screen flex justify-center items-center">
-      <div className="w-full h-full grid xl:grid-cols-2">
-        <div className="w-full h-full flex flex-col justify-between p-5">
-          <div className="w-full flex justify-center items-center">
+    <div className="flex h-screen w-full items-center justify-center">
+      <div className="grid h-full w-full xl:grid-cols-2">
+        <div className="flex h-full w-full flex-col justify-between p-5">
+          <div className="flex w-full items-center justify-center">
             <div className="w-[98%]">
-              <Link to="/" className="flex items-center gap-3 select-none">
+              <Link to="/" className="flex select-none items-center gap-3">
                 <img className="w-14" src={Logo} alt="Logo page" />
-                <h1 className="text-2xl sm:text-3xl font-bold">IEEE UNHEVAL</h1>
+                <h1 className="text-2xl font-bold sm:text-3xl">IEEE UNHEVAL</h1>
               </Link>
             </div>
           </div>
-          <div className="w-full flex justify-center">
-            <div className="w-full max-w-sm flex flex-col gap-8">
+          <div className="flex w-full justify-center">
+            <div className="flex w-full max-w-sm flex-col gap-8">
               <div>
-                <h2 className="text-4xl font-bold text-center xl:text-left">
+                <h2 className="text-center text-4xl font-bold xl:text-left">
                   ¡Bienvenid@!
                 </h2>
               </div>
@@ -102,9 +102,9 @@ const Login = () => {
             Copyright © 2023 IEEE UNHEVAL Todos los derechos reservados.
           </div>
         </div>
-        <div className="w-full h-full hidden xl:block">
+        <div className="hidden h-full w-full xl:block">
           <img
-            className="w-full h-full object-cover"
+            className="h-full w-full object-cover"
             src={ImageLogin}
             alt="Imagen Login"
           />

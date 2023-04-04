@@ -19,13 +19,13 @@ import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a lo
 import { Carousel } from "react-responsive-carousel";
 function Home() {
   return (
-    <div className="w-full flex-col flex items-center justify-center text-left sm:text-center xl:text-left overflow-hidden">
-      <div className="w-containerWitdhMain max-w-containerMax min-h-screen flex items-center justify-center">
-        <div className="w-full flex justify-center items-center gap-10 flex-col-reverse pt-52 xl:pt-0 xl:flex-row xl:gap-20">
-          <div className="w-[300px] h-[300px] relative flex items-center justify-center sm:w-[600px] sm:h-[600px] xl:min-w-[530px] xl:min-h-[530px]">
+    <div className="flex w-full flex-col items-center justify-center overflow-hidden text-left sm:text-center xl:text-left">
+      <div className="flex min-h-screen w-containerWitdhMain max-w-containerMax items-center justify-center">
+        <div className="flex w-full flex-col-reverse items-center justify-center gap-10 pt-52 xl:flex-row xl:gap-20 xl:pt-0">
+          <div className="relative flex h-[300px] w-[300px] items-center justify-center sm:h-[600px] sm:w-[600px] xl:min-h-[530px] xl:min-w-[530px]">
             <img className="w-full" src={ImagenTeam2} alt="Image Banner" />
             <div className="ctn-tiket-hd bottom-12 sm:bottom-auto sm:top-36 sm:left-1/3">
-              <div className="w-10 h-10 flex items-center justify-center bg-[#8567db] rounded-full shadow-violetC">
+              <div className="shadow-violetC flex h-10 w-10 items-center justify-center rounded-full bg-[#8567db]">
                 <FontAwesomeIcon
                   icon={faPeopleCarryBox}
                   className="text-white"
@@ -34,13 +34,13 @@ function Home() {
               Trabajo en equipo
             </div>
             <div className="ctn-tiket-hd bottom-28 sm:bottom-32 sm:left-5">
-              <div className="w-10 h-10 flex items-center justify-center bg-[#e63946] rounded-full shadow-greenC">
+              <div className="shadow-greenC flex h-10 w-10 items-center justify-center rounded-full bg-[#e63946]">
                 <FontAwesomeIcon icon={faHeart} className="text-white" />
               </div>
               Compromiso
             </div>
             <div className="ctn-tiket-hd bottom-44 sm:bottom-44 sm:left-2/3">
-              <div className="w-10 h-10 flex items-center justify-center bg-[#1fddd2] rounded-full shadow-greenLightC">
+              <div className="shadow-greenLightC flex h-10 w-10 items-center justify-center rounded-full bg-[#1fddd2]">
                 <FontAwesomeIcon icon={faUsers} className="text-white" />
               </div>
               Liderazgo
@@ -50,7 +50,7 @@ function Home() {
             <div>
               <h1 className="text-5xl font-bold md:text-6xl md:leading-12">
                 Rama estudiantil <br />
-                <span className="bg-clip-text text-transparent bg-gradient-to-r from-green-400 to-blue-500">
+                <span className="bg-gradient-to-r from-green-400 to-blue-500 bg-clip-text text-transparent">
                   IEEE UNHEVAL 2023
                 </span>
               </h1>
@@ -70,13 +70,13 @@ function Home() {
           </div>
         </div>
       </div>
-      <div className="w-full bg-colorSection_1 flex items-center justify-center">
-        <div className="w-containerWitdhMain max-w-containerMax grid xl:grid-cols-2 gap-12 md:gap-20 py-28">
-          <div className="flex flex-col gap-8 items-start sm:items-center xl:items-start text-main">
+      <div className="flex w-full items-center justify-center bg-colorSection_1">
+        <div className="grid w-containerWitdhMain max-w-containerMax gap-12 py-28 md:gap-20 xl:grid-cols-2">
+          <div className="flex flex-col items-start gap-8 text-main sm:items-center xl:items-start">
             <h2 className="text-4xl font-bold tracking-tight md:text-5xl">
               ¿Qué es IEEE UNHEVAL?
             </h2>
-            <p className="text-xl text-colorTextSecundary text-justify">
+            <p className="text-justify text-xl text-colorTextSecundary">
               La rama estudiantil IEEE UNHEVAL 2023 es un grupo de estudiantes
               de la Universidad Nacional Hermilio Valdizán en Huánuco, Perú, que
               forman parte de la organización internacional IEEE (Instituto de
@@ -86,49 +86,51 @@ function Home() {
               tecnologías de la información entre los estudiantes
               universitarios.
             </p>
-            <p className="text-xl text-colorTextSecundary text-justify">
+            <p className="text-justify text-xl text-colorTextSecundary">
               Los miembros de la rama estudiantil pueden participar en
               actividades de aprendizaje, como conferencias y talleres, para
               adquirir habilidades y conocimientos en estas áreas, así como
               también en proyectos y oportunidades de desarrollo profesional.
             </p>
           </div>
-          <div className="w-full flex justify-center items-center">
-            <Carousel
-              showThumbs={false}
-              showStatus={false}
-              infiniteLoop
-              autoPlay
-            >
-              <div className="xl:h-80">
-                <img
-                  src="https://i.ibb.co/SxvT5yQ/imagen2.jpg"
-                  alt="Image 2"
-                  className="w-full h-full object-cover"
-                />
-              </div>
-              <div className="xl:h-80">
-                <img
-                  src="https://i.ibb.co/W3mQg06/imagen1.jpg"
-                  alt="Image 3"
-                  className="w-full h-full object-cover"
-                />
-              </div>
-              <div className="xl:h-80">
-                <img
-                  src="https://i.ibb.co/KGSRR2q/Proyecto-nuevo-1.jpg"
-                  alt="Image 3"
-                  className="w-full h-full object-cover"
-                />
-              </div>
-            </Carousel>
+          <div className="flex w-full items-center justify-center">
+            <div className="flex w-full items-center justify-center md:w-10/12 xl:w-full">
+              <Carousel
+                showThumbs={false}
+                showStatus={false}
+                infiniteLoop
+                autoPlay
+              >
+                <div className="h-96">
+                  <img
+                    src="https://i.ibb.co/SxvT5yQ/imagen2.jpg"
+                    alt="Image 2"
+                    className="h-full w-full object-cover"
+                  />
+                </div>
+                <div className="h-96">
+                  <img
+                    src="https://i.ibb.co/W3mQg06/imagen1.jpg"
+                    alt="Image 3"
+                    className="h-full w-full object-cover"
+                  />
+                </div>
+                <div className="h-96">
+                  <img
+                    src="https://i.ibb.co/KGSRR2q/Proyecto-nuevo-1.jpg"
+                    alt="Image 3"
+                    className="h-full w-full object-cover"
+                  />
+                </div>
+              </Carousel>
+            </div>
           </div>
         </div>
       </div>
-      <div className="w-full flex bg-blue-600 shadow-3xl text-white items-center justify-center">
-        <div className="w-containerWitdhMain max-w-containerMax flex flex-col gap-12 md:gap-20 py-28">
-          <div className="flex flex-col gap-10 items-center text-center">
-            <h2 className="text-3xl mini:text-4xl font-bold tracking-tight md:text-5xl">
+      <div className="flex w-full items-center justify-center bg-blue-600 text-white shadow-3xl">
+        <div className="flex w-containerWitdhMain max-w-containerMax flex-col gap-12 py-28 md:gap-20">
+          <div className="flex flex-col items-center gap-10 text-center">
+            <h2 className="mini:text-4xl text-3xl font-bold tracking-tight md:text-5xl">
               Nuestras autoridades 2023
             </h2>
             <p className="w-3/4 text-xl">
@@ -137,9 +139,9 @@ function Home() {
               actividades y proyectos que beneficien a los miembros de la rama y
               a la comunidad en general.
             </p>
-            <div className="flex gap-10 flex-wrap justify-center items-center">
+            <div className="flex flex-wrap items-center justify-center gap-10">
               <div className="flex flex-col items-center justify-center gap-4">
-                <div className="w-44 h-44 rounded-full overflow-hidden flex justify-center items-center">
+                <div className="flex h-44 w-44 items-center justify-center overflow-hidden rounded-full">
                   <img src={Person} alt="" />
                 </div>
                 <div>
@@ -150,7 +152,7 @@ function Home() {
                 </div>
               </div>
               <div className="flex flex-col items-center justify-center gap-4">
-                <div className="w-44 h-44 rounded-full overflow-hidden flex justify-center items-center">
+                <div className="flex h-44 w-44 items-center justify-center overflow-hidden rounded-full">
                   <img src={Person} alt="" />
                 </div>
                 <div>
@@ -161,7 +163,7 @@ function Home() {
                 </div>
               </div>
               <div className="flex flex-col items-center justify-center gap-4">
-                <div className="w-44 h-44 rounded-full overflow-hidden flex justify-center items-center">
+                <div className="flex h-44 w-44 items-center justify-center overflow-hidden rounded-full">
                   <img src={Person} alt="" />
                 </div>
                 <div>
@@ -172,7 +174,7 @@ function Home() {
                 </div>
               </div>
               <div className="flex flex-col items-center justify-center gap-4">
-                <div className="w-44 h-44 rounded-full overflow-hidden flex justify-center items-center">
+                <div className="flex h-44 w-44 items-center justify-center overflow-hidden rounded-full">
                   <img src={Person} alt="" />
                 </div>
                 <div>
@@ -186,9 +188,9 @@ function Home() {
           </div>
         </div>
       </div>
-      <div className="w-full flex flex-col xl:flex-row xl:h-[700px] items-center justify-center overflow-hidden">
-        <div className="w-containerWitdhMain max-w-containerMax py-20 grid gap-14 xl:grid-cols-2">
-          <div className="flex flex-col justify-start gap-5 items-start sm:items-center xl:items-start">
+      <div className="flex w-full flex-col items-center justify-center overflow-hidden xl:h-[700px] xl:flex-row">
+        <div className="grid w-containerWitdhMain max-w-containerMax gap-14 py-20 xl:grid-cols-2">
+          <div className="flex flex-col items-start justify-start gap-5 sm:items-center xl:items-start">
             <h3 className="text-4xl font-bold tracking-tight md:text-5xl">
               ¿Cómo pertener a la rama estudiantil?
             </h3>
@@ -202,19 +204,19 @@ function Home() {
               Completar formulario
             </Link>
           </div>
-          <div className="flex justify-center items-center text-left">
-            <div className="flex flex-col gap-16 relative">
-              <div className="max-[380px]:hidden w-1 h-5/6 absolute bg-gradient-to-t from-teal-500 to-blue-600 top-10 left-8"></div>
-              <div className="z-0 flex max-[380px]:flex-col gap-5 items-center">
-                <div className="flex justify-center items-center bg-primary rounded-full p-5">
+          <div className="flex items-center justify-center text-left">
+            <div className="relative flex flex-col gap-16">
+              <div className="absolute top-10 left-8 h-5/6 w-1 bg-gradient-to-t from-teal-500 to-blue-600 max-[380px]:hidden"></div>
+              <div className="z-0 flex items-center gap-5 max-[380px]:flex-col">
+                <div className="flex items-center justify-center rounded-full bg-primary p-5">
                   <FontAwesomeIcon
                     icon={faBuildingColumns}
-                    className="w-7 h-7 text-white"
+                    className="h-7 w-7 text-white"
                   />
                 </div>
                 <div className="flex flex-col gap-2">
                   <div>
-                    <h3 className="font-bold text-2xl">
+                    <h3 className="text-2xl font-bold">
                       Ser estudiante de la universidad
                     </h3>
                   </div>
@@ -227,16 +229,16 @@ function Home() {
                   </div>
                 </div>
               </div>
-              <div className="z-0 flex max-[380px]:flex-col gap-5 items-center">
-                <div className="flex justify-center items-center bg-black rounded-full p-5">
+              <div className="z-0 flex items-center gap-5 max-[380px]:flex-col">
+                <div className="flex items-center justify-center rounded-full bg-black p-5">
                   <FontAwesomeIcon
                     icon={faAddressCard}
-                    className="w-7 h-7 text-white"
+                    className="h-7 w-7 text-white"
                   />
                 </div>
                 <div className="flex flex-col gap-2">
                   <div>
-                    <h3 className="font-bold text-2xl">Registra tus datos</h3>
+                    <h3 className="text-2xl font-bold">Registra tus datos</h3>
                   </div>
                   <div>
                     <p className="text-main">
@@ -247,16 +249,16 @@ function Home() {
                   </div>
                 </div>
               </div>
-              <div className="z-0 flex max-[380px]:flex-col gap-5 items-center">
-                <div className="flex justify-center items-center bg-teal-500 rounded-full p-5">
+              <div className="z-0 flex items-center gap-5 max-[380px]:flex-col">
+                <div className="flex items-center justify-center rounded-full bg-teal-500 p-5">
                   <FontAwesomeIcon
                     icon={faSackDollar}
-                    className="w-7 h-7 text-white"
+                    className="h-7 w-7 text-white"
                   />
                 </div>
                 <div className="flex flex-col gap-2">
                   <div>
-                    <h3 className="font-bold text-2xl">Pagar la membresía</h3>
+                    <h3 className="text-2xl font-bold">Pagar la membresía</h3>
                   </div>
                   <div>
                     <p className="text-main">
@@ -272,13 +274,13 @@ function Home() {
           </div>
         </div>
       </div>
-      <div className="w-full flex flex-col xl:flex-row xl:h-[580px] items-center justify-center bg-blue-600 text-white overflow-hidden relative">
-        <div className="md:px-10 xl:h-full xl:absolute xl:-left-64 min-[1400px]:-left-52">
+      <div className="relative flex w-full flex-col items-center justify-center overflow-hidden bg-blue-600 text-white xl:h-[580px] xl:flex-row">
+        <div className="md:px-10 xl:absolute xl:-left-64 xl:h-full min-[1400px]:-left-52">
           <img className="xl:h-full" src={Developers} alt="Imagen developers" />
         </div>
-        <div className="w-10/12 max-w-7xl py-20 grid xl:gap-20 xl:grid-cols-2">
+        <div className="grid w-10/12 max-w-7xl py-20 xl:grid-cols-2 xl:gap-20">
           <div></div>
-          <div className="flex flex-col justify-center gap-7 items-start sm:items-center xl:items-start">
+          <div className="flex flex-col items-start justify-center gap-7 sm:items-center xl:items-start">
             <h3 className="text-4xl font-bold tracking-tight md:text-5xl">
               Beneficios de ser miembro
             </h3>
@@ -286,34 +288,34 @@ function Home() {
               Ser miembro de la rama estudiantil IEEE UNHEVAL ofrece muchos
               beneficios, tales como:
             </p>
-            <div className="w-full grid grid-cols-1 gap-2 text-main md:grid-cols-2">
-              <div className="flex gap-3 bg-teal-500 p-4 items-center rounded-md shadow-lg">
-                <div className="flex justify-center items-center">
-                  <FontAwesomeIcon icon={faGlobe} className="w-6 h-6" />
+            <div className="grid w-full grid-cols-1 gap-2 text-main md:grid-cols-2">
+              <div className="flex items-center gap-3 rounded-md bg-teal-500 p-4 shadow-lg">
+                <div className="flex items-center justify-center">
+                  <FontAwesomeIcon icon={faGlobe} className="h-6 w-6" />
                 </div>
                 <div className="font-medium">Cursos gratuitos</div>
               </div>
-              <div className="flex gap-3 bg-primary p-4 items-center rounded-md shadow-lg">
-                <div className="flex justify-center items-center">
-                  <FontAwesomeIcon icon={faRankingStar} className="w-6 h-6" />
+              <div className="flex items-center gap-3 rounded-md bg-primary p-4 shadow-lg">
+                <div className="flex items-center justify-center">
+                  <FontAwesomeIcon icon={faRankingStar} className="h-6 w-6" />
                 </div>
                 <div className="font-medium">Desarrollo profesional</div>
               </div>
-              <div className="flex gap-3 bg-[#2b2d42] p-4 items-center rounded-md shadow-lg">
-                <div className="flex justify-center items-center">
-                  <FontAwesomeIcon icon={faVideo} className="w-6 h-6" />
+              <div className="flex items-center gap-3 rounded-md bg-[#2b2d42] p-4 shadow-lg">
+                <div className="flex items-center justify-center">
+                  <FontAwesomeIcon icon={faVideo} className="h-6 w-6" />
                 </div>
                 <div className="font-medium">Conferencias</div>
               </div>
-              <div className="flex gap-3 bg-[#e63946] p-4 items-center rounded-md shadow-lg">
-                <div className="flex justify-center items-center">
-                  <FontAwesomeIcon icon={faBook} className="w-6 h-6" />
+              <div className="flex items-center gap-3 rounded-md bg-[#e63946] p-4 shadow-lg">
+                <div className="flex items-center justify-center">
+                  <FontAwesomeIcon icon={faBook} className="h-6 w-6" />
                 </div>
                 <div className="font-medium">Libros y revistas</div>
               </div>
             </div>
             <Link
-              className="btn bg-btnColorSecondary w-full text-center p-5"
+              className="btn w-full bg-btnColorSecondary p-5 text-center"
               to="/register"
             >
               ¡Convierte en miembro ahora!
