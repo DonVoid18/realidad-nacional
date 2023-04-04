@@ -6,13 +6,12 @@ const Miembros = () => {
         <div className="w-full flex flex-col gap-10 text-center">
           <h1 className="text-5xl font-bold">Miembros</h1>
           <div className="flex justify-center items-center">
-            <p className="w-full sm:w-3/4 md:w-4/6">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed, ut!
-              Voluptate cupiditate aspernatur officiis iste a similique impedit
-              nisi nobis fugiat blanditiis! A, fugiat laudantium. Error labore
-              ad ut, quo tenetur temporibus amet eos, nihil delectus atque,
-              harum totam quis molestiae. Repellat assumenda saepe, accusamus
-              nostrum asperiores at sequi ipsum.
+            <p className="w-full sm:w-3/4 md:w-4/6 text-xl">
+              Nuestros miembros son estudiantes universitarios interesados en
+              adquirir conocimientos y habilidades, compartir sus experiencias y
+              colaborar en proyectos y actividades para fomentar el avance de
+              estas áreas. Cada año, se suman nuevos miembros que se integran a
+              esta gran comunidad de aprendizaje y trabajo en equipo.
             </p>
           </div>
           <MembersList />

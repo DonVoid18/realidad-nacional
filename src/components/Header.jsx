@@ -8,6 +8,7 @@ const DashHeader = () => {
   const linkActive = () => {
     return ({ isActive }) => (isActive ? "link text-primary" : "link");
   };
+  // list menu
   const menu = ["Conocenos", "Eventos", "Noticias", "Miembros"];
 
   return (
@@ -83,6 +84,7 @@ const DashHeader = () => {
                     <NavLink
                       to={`/${item.toLowerCase()}`}
                       className={linkActive()}
+                      onClick={() => setToggleMenu(false)}
                     >
                       {item}
                     </NavLink>
