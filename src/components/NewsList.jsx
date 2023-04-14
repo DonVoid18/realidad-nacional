@@ -1,26 +1,7 @@
 import React from "react";
 import New from "./New";
-
-const news = [
-  {
-    title: "Conferencia de Robótica",
-    date: "15 de abril de 2023",
-    location: "UNHEVAL",
-    image: "https://via.placeholder.com/600x400",
-  },
-  {
-    title: "Charla sobre Inteligencia Artificial",
-    date: "28 de mayo de 2023",
-    location: "UNHEVAL",
-    image: "https://via.placeholder.com/600x400",
-  },
-  {
-    title: "Taller de Programación en Python",
-    date: "12 de junio de 2023",
-    location: "UNHEVAL",
-    image: "https://via.placeholder.com/600x400",
-  },
-];
+import newsData from "../data/news.json";
+const news = newsData;
 
 const NewsList = () => {
   return (
@@ -29,9 +10,10 @@ const NewsList = () => {
         <New
           key={newData.title}
           title={newData.title}
-          date={newData.date}
-          location={newData.location}
-          image={newData.image}
+          date={newData.published_date}
+          location={newData.country}
+          image={newData.media}
+          link={newData.link}
         />
       ))}
     </div>

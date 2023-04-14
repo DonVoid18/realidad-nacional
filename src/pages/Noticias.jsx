@@ -8,12 +8,12 @@ const Noticias = () => {
           <NewsList />
         </div>
       </section>
-      <section className="flex w-containerWitdhMain max-w-containerMax items-center justify-center">
+      {/* <section className="flex w-containerWitdhMain max-w-containerMax items-center justify-center">
         <div className="flex w-full flex-col gap-5">
           <h1 className="text-3xl font-bold">Noticias antiguas</h1>
           <NewsList />
         </div>
-      </section>
+      </section> */}
     </div>
   );
 };
