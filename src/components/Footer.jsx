@@ -2,9 +2,9 @@ import React from "react";
 import Logo from "/logo.svg";
 const DashFooter = () => {
   return (
-    <div className="flex w-full items-center justify-center bg-colorSection_2 py-24 text-header text-white">
-      <footer className="flex w-containerWitdhMain max-w-containerMax flex-col items-center justify-center max-[500px]:w-9/12">
-        <div className="grid w-full grid-cols-1 gap-10 md:grid-cols-3">
+    <div className="flex w-full items-center justify-center bg-colorSection_2 py-14 text-header text-white">
+      <footer className="flex w-containerWitdhMain max-w-containerMax flex-col items-center justify-between gap-10 max-[500px]:w-9/12 md:flex-row">
+        {/* <div className="grid w-full grid-cols-1 gap-10 md:grid-cols-3">
           <div className="flex items-start gap-2">
             <div className="flex items-center gap-4">
               <img className="w-12" src={Logo} alt="Logo page" />
@@ -88,9 +88,15 @@ const DashFooter = () => {
               </ul>
             </div>
           </div>
+        </div> */}
+        <div className="flex items-start gap-2">
+          <div className="flex items-center gap-4">
+            <img className="w-12" src={Logo} alt="Logo page" />
+            <h1 className="text-3xl font-bold">IEEE UNHEVAL</h1>
+          </div>
         </div>
-        <div className="pt-16 text-colorTextFooter ">
-          © 2023 IEEE UNHEVAL Todos los derechos reservados.
+        <div className="text-center text-colorTextFooter">
+          <p>© 2023 IEEE UNHEVAL - Todos los derechos reservados.</p>
         </div>
       </footer>
     </div>

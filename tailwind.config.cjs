@@ -12,6 +12,7 @@ module.exports = {
         colorSection_2: "#111427",
         colorTextFooter: "#f3f3f6bf",
         colorTextSecundary: "#363c50",
+        error: "#dc3545",
       },
       fontSize: {
         header: "1.125rem",

@@ -24,7 +24,7 @@ const Conocenos = () => {
             </p>
           </div>
           <div className="flex items-center justify-center">
-            <div className="h-96 w-full">
+            <div className="h-full w-full">
               <img
                 src="https://i.ibb.co/SxvT5yQ/imagen2.jpg"
                 alt="Image 2"
@@ -49,7 +49,7 @@ const Conocenos = () => {
             </p>
           </div>
           <div className="flex items-center justify-center">
-            <div className="h-96 w-full">
+            <div className="h-full w-full">
               <img
                 src="https://i.ibb.co/W3mQg06/imagen1.jpg"
                 alt="Image 2"
