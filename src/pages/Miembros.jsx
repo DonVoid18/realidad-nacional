@@ -15,7 +15,6 @@ const Miembros = () => {
             </p>
           </div>
           <MembersList />
-          <MembersList />
         </div>
       </section>
     </div>

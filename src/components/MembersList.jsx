@@ -1,42 +1,27 @@
-// data is an array of objects
-// each object has a name, year, image
-const data = [
-  {
-    name: "Juan Perez",
-    year: "2021",
-    img: "https://via.placeholder.com/600x400",
-  },
-  {
-    name: "Maria Lopez",
-    year: "2021",
-    img: "https://via.placeholder.com/600x400",
-  },
-  {
-    name: "Pedro Sanchez",
-    year: "2021",
-    img: "https://via.placeholder.com/600x400",
-  },
-  {
-    name: "Luisa Garcia",
-    year: "2021",
-    img: "https://via.placeholder.com/600x400",
-  },
-  {
-    name: "Jose Torres",
-    year: "2021",
-    img: "https://via.placeholder.com/600x400",
-  },
-];
 import MemberCard from "./MemberCard";
+import Spinner from "./Spinner";
+import { useGetMembersQuery } from "../features/members/membersApiSlice";
 const MembersList = () => {
+  // aqui realizar la solicitud
+  const { data: members, isLoading, isError } = useGetMembersQuery();
+  if (isLoading) return <Spinner />;
+  if (isError)
+    return (
+      <p>
+        En este momento estamos teniendo problemas para mostrar los miembros...
+      </p>
+    );
+  if (members?.lenght === 0)
+    return <p>No se encontraron miembros registrados</p>;
   return (
     <div className="grid grid-cols-1 items-center justify-center gap-5 pt-5 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5">
-      {data.map((member, index) => (
+      {members.map((member, index) => (
         <MemberCard
           key={index}
           name={member.name}
-          date={member.year}
-          img={member.img}
+          lastName={member.lastName}
+          date={member.dateRegister}
+          img={member.imageProfile}
         />
       ))}
     </div>
