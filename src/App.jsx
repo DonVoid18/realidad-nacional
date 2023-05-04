@@ -7,6 +7,7 @@ import Noticias from "./pages/Noticias";
 import Miembros from "./pages/Miembros";
 import Eventos from "./pages/Eventos";
 import Page_404 from "./pages/Page_404";
+import RegisterMember from "./pages/RegisterMember";
 import { Routes, Route } from "react-router-dom";
 const App = () => {
   return (
@@ -21,6 +22,7 @@ const App = () => {
       </Route>
       <Route path="/admin/login" element={<Login />} />
       <Route path="/register" element={<Register />} />
+      <Route path="/registerMember" element={<RegisterMember />} />
     </Routes>
   );
 };

@@ -12,9 +12,16 @@ export const membersApiSlice = apiSlice.injectEndpoints({
             ]
           : [{ type: "Member", id: "LIST" }],
     }),
-    addNewMember: builder.mutation({
+    registerSoliMember: builder.mutation({
       query: (newMember) => ({
-        url: "/boards",
+        url: "/members/solicitud",
+        method: "POST",
+        body: newMember,
+      }),
+    }),
+    registerMember: builder.mutation({
+      query: (newMember) => ({
+        url: "/members/register",
         method: "POST",
         body: newMember,
       }),
@@ -22,4 +29,8 @@ export const membersApiSlice = apiSlice.injectEndpoints({
     }),
   }),
 });
-export const { useGetMembersQuery } = membersApiSlice;
+export const {
+  useGetMembersQuery,
+  useRegisterSoliMemberMutation,
+  useRegisterMemberMutation,
+} = membersApiSlice;

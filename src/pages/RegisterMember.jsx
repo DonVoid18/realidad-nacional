@@ -2,7 +2,7 @@ import Logo from "/logo.svg";
 import { Link } from "react-router-dom";
 import { useForm } from "react-hook-form";
 import Spinner from "../components/Spinner";
-import { useRegisterSoliMemberMutation } from "../features/members/membersApiSlice";
+import { useRegisterMemberMutation } from "../features/members/membersApiSlice";
 const Login = () => {
   const {
     register,
@@ -10,11 +10,11 @@ const Login = () => {
     formState: { errors },
     reset,
   } = useForm();
-  const [registerSoliMember, { isLoading, isSuccess, isError }] =
-    useRegisterSoliMemberMutation();
+  const [registerMember, { isLoading, isSuccess, isError }] =
+    useRegisterMemberMutation();
   const onSubmit = (data) => {
     console.log(data);
-    registerSoliMember(data)
+    registerMember(data)
       .unwrap()
       .then((res) => {
         console.log(res);
@@ -35,7 +35,7 @@ const Login = () => {
             <div className="flex w-full flex-col gap-5">
               <div className="pt-3 ">
                 <h2 className="text-center text-2xl font-bold">
-                  Solicitud para ser miembro
+                  Registro de miembros
                 </h2>
               </div>
               <div>

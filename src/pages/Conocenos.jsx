@@ -3,7 +3,7 @@ import Vision from "../assets/vision.svg";
 import Objetivos from "../assets/objetivos.svg";
 const Conocenos = () => {
   return (
-    <div className="mt-24 flex min-h-screen w-full flex-col items-center overflow-hidden bg-colorSection_1 text-main">
+    <div className="mt-24 flex min-h-screen w-full flex-col items-center overflow-hidden text-main">
       {/* section */}
       <section className="flex max-w-containerMax items-center justify-center pt-32">
         <div className="flex w-containerWitdhMain_2 flex-col gap-10">
