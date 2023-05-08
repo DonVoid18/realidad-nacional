@@ -3,6 +3,8 @@ import Logo from "/logo.svg";
 import BtnBurger from "./buttonsToggle/BtnBurger";
 import BtnClosed from "./buttonsToggle/BtnClosed";
 import { Link, NavLink } from "react-router-dom";
+import { motion } from "framer-motion";
+
 const DashHeader = () => {
   const [toggleMenu, setToggleMenu] = useState(false);
   const linkActive = () => {
@@ -15,10 +17,12 @@ const DashHeader = () => {
     <>
       <div className="fixed top-0 z-10 flex h-header w-full items-center justify-center bg-white text-header">
         <header className="flex w-containerWitdh max-w-containerMax items-center justify-between">
-          <Link to="/" className="flex select-none items-center gap-3">
-            <img className="w-14" src={Logo} alt="Logo page" />
-            <h1 className="text-2xl font-bold sm:text-3xl">IEEE UNHEVAL</h1>
-          </Link>
+          <div>
+            <Link to="/" className="flex select-none items-center gap-3">
+              <img className="w-14" src={Logo} alt="Logo page" />
+              <h1 className="text-2xl font-bold sm:text-3xl">IEEE UNHEVAL</h1>
+            </Link>
+          </div>
           <div className="flex items-center justify-center xl:hidden">
             <BtnBurger funct1={setToggleMenu} />
           </div>
@@ -26,14 +30,24 @@ const DashHeader = () => {
             <nav>
               <ul className="flex gap-10">
                 {menu.map((item, index) => (
-                  <li key={index}>
+                  <motion.li
+                    initial="hidden"
+                    whileInView="visible"
+                    viewport={{ once: true, amount: 0.5 }}
+                    transition={{ delay: index * 0.2, duration: 0.5 }}
+                    variants={{
+                      hidden: { opacity: 0, y: 50 },
+                      visible: { opacity: 1, y: 0 },
+                    }}
+                    key={index}
+                  >
                     <NavLink
                       to={`/${item.toLowerCase()}`}
                       className={linkActive()}
                     >
                       {item}
                     </NavLink>
-                  </li>
+                  </motion.li>
                 ))}
               </ul>
             </nav>

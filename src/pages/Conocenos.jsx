@@ -1,11 +1,22 @@
 import Mision from "../assets/mision.svg";
 import Vision from "../assets/vision.svg";
 import Objetivos from "../assets/objetivos.svg";
+import { motion } from "framer-motion";
 const Conocenos = () => {
   return (
     <div className="mt-24 flex min-h-screen w-full flex-col items-center overflow-hidden text-main">
       {/* section */}
-      <section className="flex max-w-containerMax items-center justify-center pt-32">
+      <motion.section
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true, amount: 0.5 }}
+        transition={{ duration: 0.5 }}
+        variants={{
+          hidden: { opacity: 0, y: 50 },
+          visible: { opacity: 1, y: 0 },
+        }}
+        className="flex max-w-containerMax items-center justify-center pt-32"
+      >
         <div className="flex w-containerWitdhMain_2 flex-col gap-10">
           <div className="flex flex-col items-center justify-center gap-10 text-center">
             <h2 className="text-6xl font-bold">
@@ -33,8 +44,18 @@ const Conocenos = () => {
             </div>
           </div>
         </div>
-      </section>
-      <section className="flex max-w-containerMax items-center justify-center pt-20">
+      </motion.section>
+      <motion.section
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true, amount: 0.5 }}
+        transition={{ duration: 0.5 }}
+        variants={{
+          hidden: { opacity: 0, y: 50 },
+          visible: { opacity: 1, y: 0 },
+        }}
+        className="flex max-w-containerMax items-center justify-center pt-20"
+      >
         <div className="flex w-containerWitdhMain_2 flex-col gap-10">
           <div className="flex flex-col items-start justify-center gap-5 text-left">
             <h2 className="text-4xl font-bold">Miembros fundadores</h2>
@@ -58,12 +79,22 @@ const Conocenos = () => {
             </div>
           </div>
         </div>
-      </section>
+      </motion.section>
       <section className="flex max-w-containerMax items-center justify-center py-24">
         <div className="flex max-w-containerMax items-center justify-center">
           <div className="flex w-containerWitdhMain_2 flex-col gap-24">
             <div className="grid gap-10 xl:grid-cols-2">
-              <div className="flex flex-col gap-5">
+              <motion.div
+                initial="hidden"
+                whileInView="visible"
+                viewport={{ once: true, amount: 0.5 }}
+                transition={{ duration: 1.1 }}
+                variants={{
+                  hidden: { opacity: 0, x: -50 },
+                  visible: { opacity: 1, x: 0 },
+                }}
+                className="flex flex-col gap-5"
+              >
                 <h2 className="text-4xl font-bold">Misión</h2>
                 <p className="text-justify text-xl text-colorTextSecundary">
                   La misión de la Rama Estudiantil IEEE UNHEVAL es fomentar y
@@ -77,20 +108,50 @@ const Conocenos = () => {
                   personal como profesional y así contribuir al desarrollo
                   tecnológico de la sociedad.
                 </p>
-              </div>
-              <div className="flex w-full items-center justify-center">
+              </motion.div>
+              <motion.div
+                initial="hidden"
+                whileInView="visible"
+                viewport={{ once: true, amount: 0.5 }}
+                transition={{ duration: 1.1 }}
+                variants={{
+                  hidden: { opacity: 0, x: 50 },
+                  visible: { opacity: 1, x: 0 },
+                }}
+                className="flex w-full items-center justify-center"
+              >
                 <div className="w-5/6">
                   <img src={Mision} alt="Imagen misión" />
                 </div>
-              </div>
+              </motion.div>
             </div>
             <div className="grid gap-10 xl:grid-cols-2">
-              <div className="order-2 flex w-full items-center justify-center xl:order-1">
+              <motion.div
+                initial="hidden"
+                whileInView="visible"
+                viewport={{ once: true, amount: 0.5 }}
+                transition={{ duration: 1.1 }}
+                variants={{
+                  hidden: { opacity: 0, x: -50 },
+                  visible: { opacity: 1, x: 0 },
+                }}
+                className="order-2 flex w-full items-center justify-center xl:order-1"
+              >
                 <div className="w-5/6">
                   <img src={Vision} alt="Imagen visión" />
                 </div>
-              </div>
-              <div className="order-1 flex flex-col gap-5 xl:order-2 xl:text-right">
+              </motion.div>
+              <motion.div
+                initial="hidden"
+                whileInView="visible"
+                viewport={{ once: true, amount: 0.5 }}
+                transition={{ duration: 1.1 }}
+                variants={{
+                  hidden: { opacity: 0, x: 50 },
+                  visible: { opacity: 1, x: 0 },
+                }}
+                className="order-1 flex flex-col gap-5 xl:order-2 xl:text-right"
+              >
                 <h2 className="text-4xl font-bold">Visión</h2>
                 <p className="text-justify text-xl text-colorTextSecundary">
                   La visión de la rama estudiantil IEEE UNHEVAL es ser
@@ -102,10 +163,20 @@ const Conocenos = () => {
                   formación y el desarrollo de líderes en tecnología que
                   contribuyan al avance y bienestar de la sociedad.
                 </p>
-              </div>
+              </motion.div>
             </div>
             <div className="grid gap-10 xl:grid-cols-2">
-              <div className="flex flex-col gap-5">
+              <motion.div
+                initial="hidden"
+                whileInView="visible"
+                viewport={{ once: true, amount: 0.5 }}
+                transition={{ duration: 1.1 }}
+                variants={{
+                  hidden: { opacity: 0, x: -50 },
+                  visible: { opacity: 1, x: 0 },
+                }}
+                className="flex flex-col gap-5"
+              >
                 <h2 className="text-4xl font-bold">Objetivos</h2>
                 <p className="text-justify text-xl text-colorTextSecundary">
                   Los objetivos de la rama estudiantil IEEE UNHEVAL se enfocan
@@ -121,12 +192,22 @@ const Conocenos = () => {
                   tecnológico y al desarrollo sostenible de la región y del país
                   en general.
                 </p>
-              </div>
-              <div className="flex w-full items-center justify-center">
+              </motion.div>
+              <motion.div
+                initial="hidden"
+                whileInView="visible"
+                viewport={{ once: true, amount: 0.5 }}
+                transition={{ duration: 1.1 }}
+                variants={{
+                  hidden: { opacity: 0, x: 50 },
+                  visible: { opacity: 1, x: 0 },
+                }}
+                className="flex w-full items-center justify-center"
+              >
                 <div className="w-5/6">
                   <img src={Objetivos} alt="Imagen objetivos" />
                 </div>
-              </div>
+              </motion.div>
             </div>
           </div>
         </div>

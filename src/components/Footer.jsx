@@ -1,5 +1,6 @@
 import React from "react";
 import Logo from "/logo.svg";
+import { motion } from "framer-motion";
 const DashFooter = () => {
   return (
     <div className="flex w-full items-center justify-center bg-colorSection_2 py-14 text-header text-white">
@@ -89,15 +90,35 @@ const DashFooter = () => {
             </div>
           </div>
         </div> */}
-        <div className="flex items-start gap-2">
+        <motion.div
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, amount: 0.5 }}
+          transition={{ duration: 1.1 }}
+          variants={{
+            hidden: { opacity: 0, x: -50 },
+            visible: { opacity: 1, x: 0 },
+          }}
+          className="flex items-start gap-2"
+        >
           <div className="flex items-center gap-4">
             <img className="w-12" src={Logo} alt="Logo page" />
             <h1 className="text-3xl font-bold">IEEE UNHEVAL</h1>
           </div>
-        </div>
-        <div className="text-center text-colorTextFooter">
+        </motion.div>
+        <motion.div
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, amount: 0.5 }}
+          transition={{ duration: 1.1 }}
+          variants={{
+            hidden: { opacity: 0, x: 50 },
+            visible: { opacity: 1, x: 0 },
+          }}
+          className="text-center text-colorTextFooter"
+        >
           <p>© 2023 IEEE UNHEVAL - Todos los derechos reservados.</p>
-        </div>
+        </motion.div>
       </footer>
     </div>
   );
