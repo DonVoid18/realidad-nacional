@@ -2,7 +2,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faUserTie } from "@fortawesome/free-solid-svg-icons";
 import { motion } from "framer-motion";
 
-const MemberCard = ({ identify, name, lastName, dateRegister }) => {
+const MemberCard = ({ identify, name, lastName, anioRegister }) => {
   return (
     <motion.div
       initial="hidden"
@@ -22,7 +22,7 @@ const MemberCard = ({ identify, name, lastName, dateRegister }) => {
         <h3 className="text-left line-clamp-1">
           {name} {lastName} asdjojfasiodjfoasj as dfjo asjdf oi
         </h3>
-        <p className="text-sm text-gray-600">Miembro desde el {dateRegister}</p>
+        <p className="text-sm text-gray-600">Miembro desde el {anioRegister}</p>
       </div>
     </motion.div>
   );

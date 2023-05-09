@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import { useForm } from "react-hook-form";
 import Spinner from "../components/Spinner";
 import { useRegisterMemberMutation } from "../features/members/membersApiSlice";
+import { motion } from "framer-motion";
 const Login = () => {
   const {
     register,
@@ -22,9 +23,19 @@ const Login = () => {
       });
   };
   return (
-    <div className="flex h-screen w-full items-center justify-center">
-      <div className="flex h-full w-full items-center justify-center">
-        <div className="flex h-full w-11/12 max-w-[400px] flex-col py-10 sm:w-3/5 md:w-1/3 xl:w-3/12">
+    <div className="flex w-full items-center justify-center">
+      <motion.div
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true, amount: 0.5 }}
+        transition={{ duration: 0.5 }}
+        variants={{
+          hidden: { opacity: 0, y: -50 },
+          visible: { opacity: 1, y: 0 },
+        }}
+        className="flex w-full items-center justify-center py-10"
+      >
+        <div className="flex w-11/12 max-w-[400px] flex-col sm:w-3/5 md:w-1/3 xl:w-3/12">
           <div className="flex w-full items-center justify-center">
             <Link to="/" className="flex select-none items-center gap-3">
               <img className="w-14" src={Logo} alt="Logo page" />
@@ -210,6 +221,34 @@ const Login = () => {
                         />
                       </div>
                     </div>
+                    <div>
+                      <label
+                        htmlFor="anioRegister"
+                        className="flex items-center justify-between text-base font-semibold"
+                      >
+                        <span>Año de ingreso a la IEEE</span>
+                        {errors.anioRegister && (
+                          <span className="text-xs text-error">
+                            {errors.anioRegister?.message}
+                          </span>
+                        )}
+                      </label>
+                      <div className="mt-1">
+                        <select
+                          id="anioRegister"
+                          {...register("anioRegister", {
+                            required: "Este campo es requerido",
+                          })}
+                          className="input"
+                        >
+                          <option value="" className="" disabled selected>
+                            Seleccionar
+                          </option>
+                          <option value="2022">2022</option>
+                          <option value="2023">2023</option>
+                        </select>
+                      </div>
+                    </div>
                   </div>
                   <div className="mt-3">
                     <button
@@ -243,7 +282,7 @@ const Login = () => {
             </div>
           </div>
         </div>
-      </div>
+      </motion.div>
     </div>
   );
 };
