@@ -241,7 +241,7 @@ const Login = () => {
                           })}
                           className="input"
                         >
-                          <option value="" className="" disabled selected>
+                          <option value="" disabled defaultValue>
                             Seleccionar
                           </option>
                           <option value="2022">2022</option>
