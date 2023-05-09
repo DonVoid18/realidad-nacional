@@ -3,7 +3,7 @@ import Logo from "/logo.svg";
 import { motion } from "framer-motion";
 const DashFooter = () => {
   return (
-    <div className="flex w-full items-center justify-center bg-colorSection_2 py-14 text-header text-white">
+    <div className="flex w-full items-center justify-center bg-colorSection_2 bg-[url('/public/footer-bkg-white.png')] bg-cover bg-no-repeat py-14 text-header text-white">
       <footer className="flex w-containerWitdhMain max-w-containerMax flex-col items-center justify-between gap-10 max-[500px]:w-9/12 md:flex-row">
         {/* <div className="grid w-full grid-cols-1 gap-10 md:grid-cols-3">
           <div className="flex items-start gap-2">
