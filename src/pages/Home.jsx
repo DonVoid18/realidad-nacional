@@ -192,7 +192,7 @@ function Home() {
                 className="flex flex-col items-center justify-center gap-4"
               >
                 <div className="flex h-44 w-44 items-center justify-center overflow-hidden rounded-full">
-                  <img src={Person} alt="" />
+                  <img src="https://i.ibb.co/2SqBWCY/Ing-july.png" alt="" />
                 </div>
                 <div>
                   <p className="text-main font-bold">
@@ -213,7 +213,7 @@ function Home() {
                 className="flex flex-col items-center justify-center gap-4"
               >
                 <div className="flex h-44 w-44 items-center justify-center overflow-hidden rounded-full">
-                  <img src={Person} alt="" />
+                  <img src="https://i.ibb.co/7VRtZSb/Ing-Cesar.png" alt="" />
                 </div>
                 <div>
                   <p className="text-main font-bold">
@@ -234,7 +234,7 @@ function Home() {
                 className="flex flex-col items-center justify-center gap-4"
               >
                 <div className="flex h-44 w-44 items-center justify-center overflow-hidden rounded-full">
-                  <img src="https://i.ibb.co/PWZFWfB/DrHernan.jpg" alt="" />
+                  <img src="https://i.ibb.co/PZczY8p/Dr-hernan.png" alt="" />
                 </div>
                 <div>
                   <p className="text-main font-bold">
