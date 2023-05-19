@@ -196,9 +196,9 @@ function Home() {
                 </div>
                 <div>
                   <p className="text-main font-bold">
-                    Rios Nolasco Angelo Patrick
+                    Reyna González Julissa Elizabeth
                   </p>
-                  <p className="text-main text-colorTextFooter">Presidente</p>
+                  <p className="text-main text-colorTextFooter">Consejera</p>
                 </div>
               </motion.div>
               <motion.div
@@ -217,9 +217,9 @@ function Home() {
                 </div>
                 <div>
                   <p className="text-main font-bold">
-                    Rios Nolasco Angelo Patrick
+                    Rosas Echevarría Cesar Wilfredo
                   </p>
-                  <p className="text-main text-colorTextFooter">Presidente</p>
+                  <p className="text-main text-colorTextFooter">Mentor</p>
                 </div>
               </motion.div>
               <motion.div
@@ -234,34 +234,15 @@ function Home() {
                 className="flex flex-col items-center justify-center gap-4"
               >
                 <div className="flex h-44 w-44 items-center justify-center overflow-hidden rounded-full">
-                  <img src={Person} alt="" />
+                  <img src="https://i.ibb.co/PWZFWfB/DrHernan.jpg" alt="" />
                 </div>
                 <div>
                   <p className="text-main font-bold">
-                    Rios Nolasco Angelo Patrick
+                    Hernán Abel López y Rojas
                   </p>
-                  <p className="text-main text-colorTextFooter">Presidente</p>
-                </div>
-              </motion.div>
-              <motion.div
-                initial="hidden"
-                whileInView="visible"
-                viewport={{ once: true, amount: 0.5 }}
-                transition={{ duration: 1.1 }}
-                variants={{
-                  hidden: { opacity: 0, y: 50 },
-                  visible: { opacity: 1, y: 0 },
-                }}
-                className="flex flex-col items-center justify-center gap-4"
-              >
-                <div className="flex h-44 w-44 items-center justify-center overflow-hidden rounded-full">
-                  <img src={Person} alt="" />
-                </div>
-                <div>
-                  <p className="text-main font-bold">
-                    Rios Nolasco Angelo Patrick
+                  <p className="text-main text-colorTextFooter">
+                    Docente de apoyo
                   </p>
-                  <p className="text-main text-colorTextFooter">Presidente</p>
                 </div>
               </motion.div>
             </div>
