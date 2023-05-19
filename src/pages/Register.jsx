@@ -4,6 +4,8 @@ import { useForm } from "react-hook-form";
 import Spinner from "../components/Spinner";
 import { useRegisterSoliMemberMutation } from "../features/members/membersApiSlice";
 import { motion } from "framer-motion";
+import { useState } from "react";
+
 const Login = () => {
   const {
     register,
@@ -13,7 +15,10 @@ const Login = () => {
   } = useForm();
   const [registerSoliMember, { isLoading, isSuccess, isError }] =
     useRegisterSoliMemberMutation();
+   
+  const [termsAccepted, setTermsAccepted] = useState(false);
   const onSubmit = (data) => {
+    
     console.log(data);
     registerSoliMember(data)
       .unwrap()
@@ -21,6 +26,7 @@ const Login = () => {
         console.log(res);
         reset();
       });
+    
   };
   return (
     <div className="flex h-screen w-full items-center justify-center">
@@ -220,7 +226,58 @@ const Login = () => {
                           type="text"
                         />
                       </div>
+                      
                     </div>
+                    
+                
+                    <div className="mt-1">
+                      <label 
+                        htmlFor="terms"
+                        className="flex items-center gap-1"
+                      >
+                        <input
+                          id="terms"
+                          type="checkbox"
+                          checked={termsAccepted}
+                          className="h-6 w-6"
+                          {...register("terms", {
+                            required: "Debes aceptar los términos y condiciones para continuar",
+                          })}
+                          onChange={(e) => setTermsAccepted(e.target.checked)}
+                        />
+                        <label htmlFor="terms">
+                          Acepto los {""}  
+                            <a 
+                              href="https://www.ieee.org/about/help/site-terms-conditions.html" target="_blank"
+                              rel="noopener noreferrer" 
+                              className="underline">
+                              Términos y Condiciones
+                            </a>{""}
+                            , {""}
+                            <a 
+                              href="https://www.ieee.org/security-privacy.html" 
+                              target="_blank" rel="noopener noreferrer" 
+                              className="underline">
+                              IEEE Política de privacidad
+                            </a> {""}
+                            y {" "}
+                            <a  
+                              href="https://www.ieee.org/about/corporate/governance/p9-26.html" target="_blank" 
+                              rel="noopener noreferrer" 
+                              className="underline">
+                              Política de No discriminación
+                            </a>
+                            
+                        </label>
+                          
+                      </label>
+                          {errors.terms && (
+                            <span className="text-xs text-error">
+                              {errors.terms?.message}
+                            </span>
+                            )} 
+                      </div>
+                        
                   </div>
                   <div className="mt-3">
                     <button

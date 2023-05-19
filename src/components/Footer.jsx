@@ -117,7 +117,7 @@ const DashFooter = () => {
           }}
           className="text-center text-colorTextFooter"
         >
-          <p>© 2023 IEEE UNHEVAL - Todos los derechos reservados.</p>
+          <p>© 2023 IEEE - Todos los derechos reservados.</p>
         </motion.div>
       </footer>
     </div>
