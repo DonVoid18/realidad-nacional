@@ -4,7 +4,6 @@ import { useForm } from "react-hook-form";
 import Spinner from "../components/Spinner";
 import { useRegisterSoliMemberMutation } from "../features/members/membersApiSlice";
 import { motion } from "framer-motion";
-import { useState } from "react";
 
 const Login = () => {
   const {
@@ -15,10 +14,8 @@ const Login = () => {
   } = useForm();
   const [registerSoliMember, { isLoading, isSuccess, isError }] =
     useRegisterSoliMemberMutation();
-   
-  const [termsAccepted, setTermsAccepted] = useState(false);
+
   const onSubmit = (data) => {
-    
     console.log(data);
     registerSoliMember(data)
       .unwrap()
@@ -26,7 +23,6 @@ const Login = () => {
         console.log(res);
         reset();
       });
-    
   };
   return (
     <div className="flex h-screen w-full items-center justify-center">
@@ -226,58 +222,63 @@ const Login = () => {
                           type="text"
                         />
                       </div>
-                      
                     </div>
-                    
-                
-                    <div className="mt-1">
-                      <label 
-                        htmlFor="terms"
-                        className="flex items-center gap-1"
-                      >
-                        <input
-                          id="terms"
-                          type="checkbox"
-                          checked={termsAccepted}
-                          className="h-6 w-6"
-                          {...register("terms", {
-                            required: "Debes aceptar los términos y condiciones para continuar",
-                          })}
-                          onChange={(e) => setTermsAccepted(e.target.checked)}
-                        />
-                        <label htmlFor="terms">
-                          Acepto los {""}  
-                            <a 
-                              href="https://www.ieee.org/about/help/site-terms-conditions.html" target="_blank"
-                              rel="noopener noreferrer" 
-                              className="underline">
+                    <div>
+                      <div className="mt-1 grid grid-cols-[50px_1fr]">
+                        <div className="flex items-center justify-center">
+                          <input
+                            id="terms"
+                            type="checkbox"
+                            className="relative h-[1.125rem] w-[1.125rem] appearance-none rounded-[0.25rem] border-[0.125rem] border-solid border-neutral-300 outline-none before:pointer-events-none before:absolute before:h-[0.875rem] before:w-[0.875rem] before:scale-0 before:rounded-full before:bg-transparent before:opacity-0 before:shadow-[0px_0px_0px_13px_transparent] before:content-[''] checked:border-primary checked:bg-primary checked:before:opacity-[0.16] checked:after:absolute checked:after:-mt-px checked:after:ml-[0.25rem] checked:after:block checked:after:h-[0.8125rem] checked:after:w-[0.375rem] checked:after:rotate-45 checked:after:border-[0.125rem] checked:after:border-l-0 checked:after:border-t-0 checked:after:border-solid checked:after:border-white checked:after:bg-transparent checked:after:content-[''] hover:cursor-pointer focus:shadow-none focus:transition-[border-color_0.2s] focus:before:scale-100 focus:before:opacity-[0.12] focus:before:shadow-[0px_0px_0px_13px_rgba(0,0,0,0.6)] focus:before:transition-[box-shadow_0.2s,transform_0.2s] focus:after:absolute focus:after:z-[1] focus:after:block focus:after:h-[0.875rem] focus:after:w-[0.875rem] focus:after:rounded-[0.125rem] focus:after:content-[''] checked:focus:before:scale-100 checked:focus:before:shadow-[0px_0px_0px_13px_#3b71ca] checked:focus:before:transition-[box-shadow_0.2s,transform_0.2s] checked:focus:after:-mt-px checked:focus:after:ml-[0.25rem] checked:focus:after:h-[0.8125rem] checked:focus:after:w-[0.375rem] checked:focus:after:rotate-45 checked:focus:after:rounded-none checked:focus:after:border-[0.125rem] checked:focus:after:border-l-0 checked:focus:after:border-t-0 checked:focus:after:border-solid checked:focus:after:border-white checked:focus:after:bg-transparent"
+                            {...register("terms", {
+                              required:
+                                "Debes aceptar los términos y condiciones para continuar",
+                            })}
+                          />
+                        </div>
+                        <div className="">
+                          <label htmlFor="terms">
+                            Acepto los {""}
+                            <a
+                              href="https://www.ieee.org/about/help/site-terms-conditions.html"
+                              target="_blank"
+                              rel="noopener noreferrer"
+                              className="underline"
+                            >
                               Términos y Condiciones
-                            </a>{""}
-                            , {""}
-                            <a 
-                              href="https://www.ieee.org/security-privacy.html" 
-                              target="_blank" rel="noopener noreferrer" 
-                              className="underline">
+                            </a>
+                            {""}, {""}
+                            <a
+                              href="https://www.ieee.org/security-privacy.html"
+                              target="_blank"
+                              rel="noopener noreferrer"
+                              className="underline"
+                            >
                               IEEE Política de privacidad
-                            </a> {""}
-                            y {" "}
-                            <a  
-                              href="https://www.ieee.org/about/corporate/governance/p9-26.html" target="_blank" 
-                              rel="noopener noreferrer" 
-                              className="underline">
+                            </a>{" "}
+                            {""}y{" "}
+                            <a
+                              href="https://www.ieee.org/about/corporate/governance/p9-26.html"
+                              target="_blank"
+                              rel="noopener noreferrer"
+                              className="underline"
+                            >
                               Política de No discriminación
                             </a>
-                            
-                        </label>
-                          
-                      </label>
-                          {errors.terms && (
-                            <span className="text-xs text-error">
-                              {errors.terms?.message}
-                            </span>
-                            )} 
+                          </label>
+                        </div>
                       </div>
-                        
+                      <label
+                        htmlFor="terms"
+                        className="flex items-center justify-end text-base font-semibold"
+                      >
+                        {errors.terms && (
+                          <span className="text-xs text-error">
+                            {errors.terms?.message}
+                          </span>
+                        )}
+                      </label>
+                    </div>
                   </div>
                   <div className="mt-3">
                     <button

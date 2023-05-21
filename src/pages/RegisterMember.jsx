@@ -110,6 +110,34 @@ const Login = () => {
                     </div>
                     <div>
                       <label
+                        htmlFor="cod_ieee"
+                        className="flex items-center justify-between text-base font-semibold"
+                      >
+                        <span>Código IEEE</span>
+                        {errors.cod_ieee && (
+                          <span className="text-xs text-error">
+                            {errors.cod_ieee?.message}
+                          </span>
+                        )}
+                      </label>
+                      <div className="mt-1">
+                        <input
+                          id="cod_ieee"
+                          {...register("cod_ieee", {
+                            required: "Este campo es requerido",
+                            minLength: {
+                              value: 8,
+                              message: "Como minimo 8 caracteres",
+                            },
+                          })}
+                          placeholder="Código de miembro ieee"
+                          className="input"
+                          type="text"
+                        />
+                      </div>
+                    </div>
+                    {/* <div>
+                      <label
                         htmlFor="address"
                         className="flex items-center justify-between text-base font-semibold"
                       >
@@ -135,8 +163,8 @@ const Login = () => {
                           type="text"
                         />
                       </div>
-                    </div>
-                    <div>
+                    </div> */}
+                    {/* <div>
                       <label
                         htmlFor="email"
                         className="flex items-center justify-between text-base font-semibold"
@@ -164,8 +192,8 @@ const Login = () => {
                           type="text"
                         />
                       </div>
-                    </div>
-                    <div>
+                    </div> */}
+                    {/* <div>
                       <label
                         htmlFor="dni"
                         className="flex items-center justify-between text-base font-semibold"
@@ -192,8 +220,8 @@ const Login = () => {
                           type="text"
                         />
                       </div>
-                    </div>
-                    <div>
+                    </div> */}
+                    {/* <div>
                       <label
                         htmlFor="numberPhone"
                         className="flex items-center justify-between text-base font-semibold"
@@ -220,7 +248,7 @@ const Login = () => {
                           type="text"
                         />
                       </div>
-                    </div>
+                    </div> */}
                     <div>
                       <label
                         htmlFor="anioRegister"
@@ -241,11 +269,13 @@ const Login = () => {
                           })}
                           className="input"
                         >
-                          <option value="" disabled defaultValue>
+                          {/* <option value="" disabled defaultValue>
                             Seleccionar
+                          </option> */}
+                          {/* <option value="2022">2022</option> */}
+                          <option value="2023" defaultValue>
+                            2023
                           </option>
-                          <option value="2022">2022</option>
-                          <option value="2023">2023</option>
                         </select>
                       </div>
                     </div>

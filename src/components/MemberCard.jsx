@@ -8,10 +8,10 @@ const MemberCard = ({ identify, name, lastName, anioRegister }) => {
       initial="hidden"
       whileInView="visible"
       viewport={{ once: true, amount: 0.5 }}
-      transition={{ duration: identify * 0.4 }}
+      transition={{ duration: identify * 0.1 }}
       variants={{
-        hidden: { opacity: 0, scale: 0.5 },
-        visible: { opacity: 1, scale: 1 },
+        hidden: { opacity: 0, y: 20 },
+        visible: { opacity: 1, y: 0 },
       }}
       className="flex h-20"
     >
