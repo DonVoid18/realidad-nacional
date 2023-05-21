@@ -25,7 +25,7 @@ const Login = () => {
       });
   };
   return (
-    <div className="flex h-screen w-full items-center justify-center">
+    <div className="flex h-full w-full items-center justify-center">
       <motion.div
         initial="hidden"
         whileInView="visible"
@@ -37,7 +37,7 @@ const Login = () => {
         }}
         className="flex h-full w-full items-center justify-center"
       >
-        <div className="flex h-full w-11/12 max-w-[400px] flex-col py-10 sm:w-3/5 md:w-1/3 xl:w-3/12">
+        <div className="flex h-full w-11/12 max-w-[400px] flex-col py-20 sm:w-3/5 md:w-1/3 xl:w-3/12">
           <div className="flex w-full items-center justify-center">
             <Link to="/" className="flex select-none items-center gap-3">
               <img className="w-14" src={Logo} alt="Logo page" />
