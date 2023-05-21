@@ -10,27 +10,23 @@ import Miembros from "./pages/Miembros";
 import Eventos from "./pages/Eventos";
 import Page_404 from "./pages/Page_404";
 import RegisterMember from "./pages/RegisterMember";
-import { Routes, Route, useLocation } from "react-router-dom";
+import { Routes, Route} from "react-router-dom";
 const App = () => {
   const [loading, setLoading] = useState(true);
-  const location = useLocation();
-
+  
     useEffect(() => {
-      setLoading(true);
       const timer = setTimeout(() => {
         setLoading(false);
-      }, 500); 
+      }, 700); 
 
       return () => {
         clearTimeout(timer);
       };
-    }, [location]);
+    }, []);
   
   return (
     <>
-      {loading ? (
-        <Preloader />
-      ) : (
+       {loading && <Preloader />}
     <Routes>
       <Route path="/" element={<LayoutMain />}>
         <Route index element={<Home />} />
@@ -44,7 +40,6 @@ const App = () => {
       <Route path="/register" element={<Register />} />
       <Route path="/registerMember" element={<RegisterMember />} />
     </Routes>
-      )}
     </>
   );
   
