@@ -20,7 +20,7 @@ const MemberCard = ({ identify, name, lastName, anioRegister }) => {
       </div>
       <div className="flex w-full flex-col items-start justify-center rounded-r-md border-y border-r px-3">
         <h3 className="text-left line-clamp-1">
-          {name} {lastName} asdjojfasiodjfoasj as dfjo asjdf oi
+          {name} {lastName}
         </h3>
         <p className="text-sm text-gray-600">Miembro desde el {anioRegister}</p>
       </div>
