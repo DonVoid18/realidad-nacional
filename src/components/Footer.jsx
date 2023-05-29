@@ -1,6 +1,7 @@
 import React from "react";
 import Logo from "/logo.svg";
 import { motion } from "framer-motion";
+import LogoIeeeFooter from "/ieee_unheval_rgb_u_stacked_w.png";
 const DashFooter = () => {
   return (
     <div className="flex w-full items-center justify-center bg-colorSection_2 bg-[url('/public/footer-bkg-white.png')] bg-cover bg-no-repeat py-14 text-header text-white">
@@ -102,8 +103,7 @@ const DashFooter = () => {
           className="flex items-start gap-2"
         >
           <div className="flex items-center gap-4">
-            <img className="w-12" src={Logo} alt="Logo page" />
-            <h1 className="text-3xl font-bold">IEEE UNHEVAL</h1>
+            <img className="w-48" src={LogoIeeeFooter} alt="Logo page" />
           </div>
         </motion.div>
         <motion.div

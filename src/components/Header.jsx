@@ -1,10 +1,9 @@
 import { useState } from "react";
-import Logo from "/logo.svg";
 import BtnBurger from "./buttonsToggle/BtnBurger";
 import BtnClosed from "./buttonsToggle/BtnClosed";
 import { Link, NavLink } from "react-router-dom";
 import { motion } from "framer-motion";
-
+import LogoIeee from "/ieee_unheval_rgb_u_stacked_c.png";
 const DashHeader = () => {
   const [toggleMenu, setToggleMenu] = useState(false);
   const linkActive = () => {
@@ -19,8 +18,7 @@ const DashHeader = () => {
         <header className="flex w-containerWitdh max-w-containerMax items-center justify-between">
           <div>
             <Link to="/" className="flex select-none items-center gap-3">
-              <img className="w-14" src={Logo} alt="Logo page" />
-              <h1 className="text-2xl font-bold sm:text-3xl">IEEE UNHEVAL</h1>
+              <img className="w-48" src={LogoIeee} alt="Logo page" />
             </Link>
           </div>
           <div className="flex items-center justify-center xl:hidden">
@@ -82,8 +80,7 @@ const DashHeader = () => {
       >
         <div className="flex h-header w-containerWitdh items-center justify-between">
           <Link to="/" className="flex select-none items-center gap-3">
-            <img className="w-14" src={Logo} alt="Logo page" />
-            <h1 className="text-2xl font-bold sm:text-3xl">IEEE UNHEVAL</h1>
+            <img className="w-48" src={LogoIeee} alt="Logo page" />
           </Link>
           <div className="flex items-center justify-center">
             <BtnClosed funct1={setToggleMenu} />
