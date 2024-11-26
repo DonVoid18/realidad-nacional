@@ -1,9 +1,10 @@
+import { faEye, faEyeSlash } from "@fortawesome/free-solid-svg-icons";
+
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { useState } from "react";
+import { Link } from "react-router-dom";
 import ImageLogin from "../assets/imageLogin.jpg";
 import Logo from "/logo.svg";
-import { Link } from "react-router-dom";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faEye, faEyeSlash } from "@fortawesome/free-solid-svg-icons";
 const Login = () => {
   const [mostrarPass, setMostrarPass] = useState(false);
   const handleSubmit = (e) => {
@@ -20,7 +21,7 @@ const Login = () => {
             <div className="w-[98%]">
               <Link to="/" className="flex select-none items-center gap-3">
                 <img className="w-14" src={Logo} alt="Logo page" />
-                <h1 className="text-2xl font-bold sm:text-3xl">IEEE UNHEVAL</h1>
+                <h1 className="text-2xl font-bold sm:text-3xl">UNHEVAL</h1>
               </Link>
             </div>
           </div>
@@ -99,7 +100,7 @@ const Login = () => {
             </div>
           </div>
           <div className="text-center text-base text-colorTextSecundary">
-            Copyright © 2023 IEEE UNHEVAL Todos los derechos reservados.
+            Copyright © 2023 UNHEVAL Todos los derechos reservados.
           </div>
         </div>
         <div className="hidden h-full w-full xl:block">

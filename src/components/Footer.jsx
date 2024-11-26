@@ -9,7 +9,7 @@ const DashFooter = () => {
           <div className="flex items-start gap-2">
             <div className="flex items-center gap-4">
               <img className="w-12" src={Logo} alt="Logo page" />
-              <h1 className="text-3xl font-bold">IEEE UNHEVAL</h1>
+              <h1 className="text-3xl font-bold">UNHEVAL</h1>
             </div>
           </div>
           <div className="flex flex-col gap-5">

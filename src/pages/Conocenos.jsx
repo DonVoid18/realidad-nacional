@@ -93,7 +93,7 @@ const Conocenos = () => {
               >
                 <h2 className="text-4xl font-bold">Misión</h2>
                 <p className="text-justify text-xl text-colorTextSecundary">
-                  La misión de la Rama Estudiantil IEEE UNHEVAL es fomentar y
+                  La misión de la Rama Estudiantil UNHEVAL es fomentar y
                   promover el desarrollo de habilidades, conocimientos y valores
                   en el campo de la ingeniería eléctrica, electrónica,
                   computacional y tecnologías de la información entre los
@@ -150,7 +150,7 @@ const Conocenos = () => {
               >
                 <h2 className="text-4xl font-bold">Visión</h2>
                 <p className="text-justify text-xl text-colorTextSecundary">
-                  La visión de la rama estudiantil IEEE UNHEVAL es ser
+                  La visión de la rama estudiantil UNHEVAL es ser
                   reconocida como una comunidad líder en la promoción y
                   desarrollo de habilidades técnicas y profesionales en los
                   campos de la ingeniería eléctrica, electrónica, computacional

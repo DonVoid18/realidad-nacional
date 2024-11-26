@@ -1,9 +1,9 @@
-import Logo from "/logo.svg";
-import { Link } from "react-router-dom";
+import { motion } from "framer-motion";
 import { useForm } from "react-hook-form";
+import { Link } from "react-router-dom";
 import Spinner from "../components/Spinner";
 import { useRegisterMemberMutation } from "../features/members/membersApiSlice";
-import { motion } from "framer-motion";
+import Logo from "/logo.svg";
 const Login = () => {
   const {
     register,
@@ -39,7 +39,7 @@ const Login = () => {
           <div className="flex w-full items-center justify-center">
             <Link to="/" className="flex select-none items-center gap-3">
               <img className="w-14" src={Logo} alt="Logo page" />
-              <h1 className="text-2xl font-bold sm:text-3xl">IEEE UNHEVAL</h1>
+              <h1 className="text-2xl font-bold sm:text-3xl">UNHEVAL</h1>
             </Link>
           </div>
           <div className="flex w-full flex-col">
