@@ -1,7 +1,5 @@
-import Mision from "../assets/mision.svg";
-import Vision from "../assets/vision.svg";
-import Objetivos from "../assets/objetivos.svg";
 import { motion } from "framer-motion";
+import Objetivos from "../assets/objetivos.svg";
 const Conocenos = () => {
   return (
     <div className="mt-24 flex min-h-screen w-full flex-col items-center overflow-hidden text-main">
@@ -9,7 +7,6 @@ const Conocenos = () => {
       <motion.section
         initial="hidden"
         whileInView="visible"
-        viewport={{ once: true, amount: 0.5 }}
         transition={{ duration: 0.5 }}
         variants={{
           hidden: { opacity: 0, y: 50 },
@@ -20,18 +17,19 @@ const Conocenos = () => {
         <div className="flex w-containerWitdhMain_2 flex-col gap-10">
           <div className="flex flex-col items-center justify-center gap-10 text-center">
             <h2 className="text-6xl font-bold">
-              Conoce a la rama estudiantil IEEE UNHEVAL 2023
+              Explora el impacto del desarrollo y las políticas públicas
             </h2>
             <p className="text-xl text-colorTextSecundary">
-              En esta sección, encontrarás información sobre las autoridades que
-              impulsaron la creación de nuestra rama estudiantil, así como los
-              objetivos, misión y visión que nos guían en nuestras actividades y
-              proyectos. Además, podrás conocer a nuestros miembros y todo el
-              equipo que trabaja para que IEEE UNHEVAL sea una comunidad activa
-              y en constante crecimiento. Te invitamos a explorar y conocer más
-              sobre nuestra rama estudiantil IEEE UNHEVAL y a unirte a nosotros
-              para formar parte de esta gran comunidad de estudiantes
-              apasionados por la ingeniería y la tecnología.
+              En esta sección, encontrarás información sobre los actores clave y
+              las estrategias que han impulsado avances significativos en
+              desarrollo y políticas públicas. Además, podrás descubrir los
+              objetivos, enfoques y visiones que orientan estas iniciativas
+              hacia un futuro más equitativo y sostenible. Te invitamos a
+              explorar cómo el desarrollo y las políticas públicas pueden
+              transformar comunidades, fomentar el bienestar social y promover
+              un crecimiento inclusivo. Forma parte de esta gran red de
+              profesionales comprometidos con la creación de un impacto positivo
+              en la sociedad.
             </p>
           </div>
           <div className="flex items-center justify-center">
@@ -58,15 +56,13 @@ const Conocenos = () => {
       >
         <div className="flex w-containerWitdhMain_2 flex-col gap-10">
           <div className="flex flex-col items-start justify-center gap-5 text-left">
-            <h2 className="text-4xl font-bold">Miembros fundadores</h2>
+            <h2 className="text-4xl font-bold">¿Qué son las políticas públicas?</h2>
             <p className="text-justify text-xl text-colorTextSecundary">
-              Este equipo de trabajo está formado por líderes que comparten la
-              visión y los objetivos de la rama estudiantil, trabajando siempre
-              en equipo para llevar a cabo proyectos y actividades que
-              contribuyan a la formación y desarrollo de los estudiantes.
-              Además, su experiencia y conocimientos se han transmitido a los
-              nuevos miembros, asegurando así la continuidad y fortalecimiento
-              de la rama estudiantil.
+              Las políticas públicas son acciones planificadas que los gobiernos
+              implementan para resolver problemas sociales o aprovechar
+              oportunidades de desarrollo. Estas políticas son el resultado de
+              un proceso que incluye la identificación de problemas, diseño de
+              estrategias, implementación y evaluación de resultados.
             </p>
           </div>
           <div className="flex items-center justify-center">
@@ -83,7 +79,7 @@ const Conocenos = () => {
       <section className="flex max-w-containerMax items-center justify-center py-24">
         <div className="flex max-w-containerMax items-center justify-center">
           <div className="flex w-containerWitdhMain_2 flex-col gap-24">
-            <div className="grid gap-10 xl:grid-cols-2">
+            {/* <div className="grid gap-10 xl:grid-cols-2">
               <motion.div
                 initial="hidden"
                 whileInView="visible"
@@ -164,7 +160,7 @@ const Conocenos = () => {
                   contribuyan al avance y bienestar de la sociedad.
                 </p>
               </motion.div>
-            </div>
+            </div> */}
             <div className="grid gap-10 xl:grid-cols-2">
               <motion.div
                 initial="hidden"
@@ -179,18 +175,20 @@ const Conocenos = () => {
               >
                 <h2 className="text-4xl font-bold">Objetivos</h2>
                 <p className="text-justify text-xl text-colorTextSecundary">
-                  Los objetivos de la rama estudiantil IEEE UNHEVAL se enfocan
-                  en fomentar el interés y el avance en las áreas de la
-                  ingeniería eléctrica, electrónica, computacional y de
-                  tecnologías de la información entre los estudiantes
-                  universitarios de la Universidad Nacional Hermilio Valdizán en
-                  Huánuco, Perú. Además, la rama estudiantil tiene como objetivo
-                  promover la colaboración entre los estudiantes y los
-                  profesionales del campo de la ingeniería, así como fomentar el
-                  desarrollo profesional y la realización de proyectos
-                  innovadores. Todo esto con el fin de contribuir al avance
-                  tecnológico y al desarrollo sostenible de la región y del país
-                  en general.
+                  Difundir enfoques innovadores de desarrollo: Analizar y
+                  compartir experiencias exitosas de políticas públicas a nivel
+                  local e internacional. Fomentar la participación ciudadana:
+                  Promover el involucramiento activo de comunidades,
+                  organizaciones y actores clave en la creación de políticas
+                  públicas. Apoyar la formación de capacidades: Capacitar a
+                  líderes, tomadores de decisiones y ciudadanos en el diseño,
+                  implementación y evaluación de políticas públicas efectivas.
+                  Incentivar la sostenibilidad: Impulsar políticas alineadas con
+                  los Objetivos de Desarrollo Sostenible (ODS) para enfrentar
+                  retos como el cambio climático y la desigualdad. Promover la
+                  transparencia y rendición de cuentas: Facilitar herramientas y
+                  metodologías que garanticen la transparencia en el diseño e
+                  implementación de políticas públicas.
                 </p>
               </motion.div>
               <motion.div

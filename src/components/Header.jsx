@@ -12,7 +12,7 @@ const DashHeader = () => {
     return ({ isActive }) => (isActive ? "link text-primary" : "link");
   };
   // list menu
-  const menu = ["Conocenos", "Eventos", "Noticias", "Miembros"];
+  const menu = ["Informacion", "Politicas", "Desarrollo", "Retos"];
 
   return (
     <>
