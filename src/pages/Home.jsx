@@ -1,23 +1,25 @@
-import Person from "../assets/person.jpg";
-import Developers from "../assets/developers.jpg";
-import { Link } from "react-router-dom";
-import ImagenTeam2 from "../assets/team2.svg";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
+
 import {
-  faBook,
-  faGlobe,
-  faBuildingColumns,
   faAddressCard,
-  faSackDollar,
-  faPeopleCarryBox,
-  faUsers,
+  faBook,
+  faBuildingColumns,
+  faGlobe,
   faHeart,
+  faPeopleCarryBox,
   faRankingStar,
+  faSackDollar,
+  faUsers,
   faVideo,
 } from "@fortawesome/free-solid-svg-icons";
-import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
-import { Carousel } from "react-responsive-carousel";
+
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { motion } from "framer-motion";
+import { Carousel } from "react-responsive-carousel";
+import { Link } from "react-router-dom";
+import Developers from "../assets/developers.jpg";
+import ImagenTeam2 from "../assets/team2.svg";
+
 function Home() {
   return (
     <div className="flex w-full flex-col items-center justify-center overflow-hidden text-left sm:text-center xl:text-left">
@@ -69,22 +71,25 @@ function Home() {
           >
             <div>
               <h1 className="text-5xl font-bold md:text-6xl md:leading-12">
-                Rama estudiantil <br />
+                Perspectivas del desarrollo y <br />
                 <span className="bg-gradient-to-r from-green-400 to-blue-500 bg-clip-text text-transparent">
-                  IEEE UNHEVAL 2023
+                  polítias públicas
                 </span>
               </h1>
             </div>
             <div className="pt-5">
               <p className="text-xl text-colorTextSecundary">
-                Si te apasiona la tecnología y la innovación, ¡La rama
-                estudiantil IEEE UNHEVAL 2023 es el lugar perfecto para ti!
-                Únete y descubre lo que puedes lograr.
+                El desarrollo y las políticas públicas son dos conceptos
+                interrelacionados que juegan un papel crucial en la mejora de la
+                calidad de vida de las personas y en la construcción de
+                sociedades más equitativas y sostenibles. A continuación, se
+                presentan las principales perspectivas sobre el desarrollo y
+                cómo las políticas públicas influyen en este proceso:
               </p>
             </div>
             <div className="pt-9 text-main">
               <Link className="btn bg-btnColorSecondary p-5" to="/register">
-                ¡Únete ahora!
+                Comentarios
               </Link>
             </div>
           </motion.div>
@@ -104,24 +109,26 @@ function Home() {
             className="flex flex-col items-start gap-8 text-main sm:items-center xl:items-start"
           >
             <h2 className="text-4xl font-bold tracking-tight md:text-5xl">
-              ¿Qué es IEEE UNHEVAL?
+              1. Definición de Desarrollo
             </h2>
             <p className="text-justify text-xl text-colorTextSecundary">
-              La rama estudiantil IEEE UNHEVAL 2023 es un grupo de estudiantes
-              de la Universidad Nacional Hermilio Valdizán en Huánuco, Perú, que
-              forman parte de la organización internacional IEEE (Instituto de
-              Ingenieros Eléctricos y Electrónicos). Esta rama estudiantil tiene
-              como objetivo principal fomentar el interés y el avance en las
-              áreas de la ingeniería eléctrica, electrónica, computacional y de
-              tecnologías de la información entre los estudiantes
-              universitarios.
+              El desarrollo se refiere al proceso de mejora de las condiciones
+              económicas, sociales, culturales y políticas de una sociedad. Este
+              concepto ha evolucionado a lo largo del tiempo, pasando de un
+              enfoque meramente económico (crecimiento del PIB) a una visión
+              multidimensional que incluye: Desarrollo humano: Prioriza el
+              bienestar, la salud, la educación y las oportunidades para las
+              personas. Sostenibilidad: Integra aspectos medioambientales,
+              garantizando que el progreso no comprometa las necesidades de las
+              futuras generaciones. Equidad: Busca reducir desigualdades
+              sociales, económicas y de género.
             </p>
-            <p className="text-justify text-xl text-colorTextSecundary">
+            {/* <p className="text-justify text-xl text-colorTextSecundary">
               Los miembros de la rama estudiantil pueden participar en
               actividades de aprendizaje, como conferencias y talleres, para
               adquirir habilidades y conocimientos en estas áreas, así como
               también en proyectos y oportunidades de desarrollo profesional.
-            </p>
+            </p> */}
           </motion.div>
           <motion.div
             initial="hidden"
@@ -171,13 +178,12 @@ function Home() {
         <div className="flex w-containerWitdhMain max-w-containerMax flex-col gap-12 py-28 md:gap-20">
           <div className="flex flex-col items-center gap-10 text-center">
             <h2 className="mini:text-4xl text-3xl font-bold tracking-tight md:text-5xl">
-              Nuestras autoridades 2023
+              Autores Relevantes en Desarrollo y Políticas Públicas
             </h2>
             <p className="w-3/4 text-xl">
-              Cada uno de estos miembros de la junta directiva tiene la
-              responsabilidad de liderar un equipo de trabajo y coordinar
-              actividades y proyectos que beneficien a los miembros de la rama y
-              a la comunidad en general.
+              Adoptar políticas públicas bien diseñadas y ejecutadas,
+              fundamentadas en ideas de expertos como estos, es esencial para
+              crear un futuro equitativo, sostenible y próspero.
             </p>
             <div className="flex flex-wrap items-center justify-center gap-10">
               <motion.div
@@ -195,10 +201,10 @@ function Home() {
                   <img src="https://i.ibb.co/2SqBWCY/Ing-july.png" alt="" />
                 </div>
                 <div>
-                  <p className="text-main font-bold">
-                    Reyna González Julissa Elizabeth
+                  <p className="text-main font-bold">Amartya Sen</p>
+                  <p className="text-main text-colorTextFooter">
+                    Economista y filósofo
                   </p>
-                  <p className="text-main text-colorTextFooter">Consejera</p>
                 </div>
               </motion.div>
               <motion.div
@@ -216,10 +222,10 @@ function Home() {
                   <img src="https://i.ibb.co/7VRtZSb/Ing-Cesar.png" alt="" />
                 </div>
                 <div>
-                  <p className="text-main font-bold">
-                    Rosas Echevarría Cesar Wilfredo
+                  <p className="text-main font-bold">Joseph Stiglitz</p>
+                  <p className="text-main text-colorTextFooter">
+                    Economista y Premio Nobel
                   </p>
-                  <p className="text-main text-colorTextFooter">Mentor</p>
                 </div>
               </motion.div>
               <motion.div
@@ -237,11 +243,9 @@ function Home() {
                   <img src="https://i.ibb.co/PZczY8p/Dr-hernan.png" alt="" />
                 </div>
                 <div>
-                  <p className="text-main font-bold">
-                    Hernán Abel López y Rojas
-                  </p>
+                  <p className="text-main font-bold">Elinor Ostrom</p>
                   <p className="text-main text-colorTextFooter">
-                    Docente de apoyo
+                    Científica política y Premio Nobel
                   </p>
                 </div>
               </motion.div>
@@ -263,13 +267,12 @@ function Home() {
             className="flex flex-col items-start justify-start gap-5 sm:items-center xl:items-start"
           >
             <h3 className="text-4xl font-bold tracking-tight md:text-5xl">
-              ¿Cómo pertener a la rama estudiantil?
+              ¿Cómo promover el desarrollo y las políticas públicas?
             </h3>
             <p className="text-xl text-colorTextSecundary">
-              Si eres estudiante de la Universidad Nacional Hermilio Valdizán y
-              tienes interés en la ingeniería eléctrica, electrónica,
-              computacional o de tecnologías de la información, ¡te invitamos a
-              unirte a la rama estudiantil IEEE UNHEVAL!
+              Si te interesa contribuir al desarrollo sostenible, la equidad
+              social y la innovación en políticas públicas, sigue estos pasos
+              para involucrarte:
             </p>
             <Link className="btn bg-black p-5" to="/register">
               Completar formulario
@@ -298,14 +301,15 @@ function Home() {
                 <div className="flex flex-col gap-2">
                   <div>
                     <h3 className="text-2xl font-bold">
-                      Ser estudiante de la universidad
+                      Entender el contexto del desarrollo
                     </h3>
                   </div>
                   <div>
                     <p className="text-main">
-                      Para poder pertenecer a la rama estudiantil IEEE UNHEVAL,
-                      debes ser estudiante de la Universidad Nacional Hermilio
-                      Valdizán en Huánuco, Perú.
+                      Infórmate sobre los desafíos globales como la pobreza, la
+                      desigualdad y el cambio climático, y conoce los enfoques
+                      utilizados para abordarlos, como los Objetivos de
+                      Desarrollo Sostenible (ODS).
                     </p>
                   </div>
                 </div>
@@ -319,13 +323,16 @@ function Home() {
                 </div>
                 <div className="flex flex-col gap-2">
                   <div>
-                    <h3 className="text-2xl font-bold">Registra tus datos</h3>
+                    <h3 className="text-2xl font-bold">
+                      Participar en iniciativas locales
+                    </h3>
                   </div>
                   <div>
                     <p className="text-main">
-                      Registra tus datos en nuestro formulario de membresía para
-                      convertirte en miembro de la rama estudiantil IEEE
-                      UNHEVAL.
+                      Registra tus datos en plataformas de organizaciones que
+                      promuevan el desarrollo social o en proyectos de
+                      investigación sobre políticas públicas. Esto te permitirá
+                      formar parte de redes que impulsan el cambio.
                     </p>
                   </div>
                 </div>
@@ -339,14 +346,16 @@ function Home() {
                 </div>
                 <div className="flex flex-col gap-2">
                   <div>
-                    <h3 className="text-2xl font-bold">Pagar la membresía</h3>
+                    <h3 className="text-2xl font-bold">
+                      Contribuir con acciones concretas
+                    </h3>
                   </div>
                   <div>
                     <p className="text-main">
-                      Para completar tu registro, deberás realizar el pago de la
-                      membresía anual de la rama estudiantil IEEE UNHEVAL. El
-                      pago te permitirá participar en todas las actividades y
-                      eventos.
+                      Sé parte de programas que promuevan la equidad, la
+                      sostenibilidad o la innovación, como voluntariado,
+                      iniciativas comunitarias o desarrollo de propuestas para
+                      políticas públicas.
                     </p>
                   </div>
                 </div>
@@ -363,11 +372,11 @@ function Home() {
           <div></div>
           <div className="flex flex-col items-start justify-center gap-7 sm:items-center xl:items-start">
             <h3 className="text-4xl font-bold tracking-tight md:text-5xl">
-              Beneficios de ser miembro
+              Beneficios de participar en el desarrollo y las políticas públicas
             </h3>
             <p className="text-xl">
-              Ser miembro de la rama estudiantil IEEE UNHEVAL ofrece muchos
-              beneficios, tales como:
+              Contribuir al desarrollo sostenible y la creación de políticas
+              públicas trae consigo múltiples beneficios, tales como:
             </p>
             <div className="grid w-full grid-cols-1 gap-2 text-main md:grid-cols-2">
               <motion.div
@@ -384,7 +393,7 @@ function Home() {
                 <div className="flex items-center justify-center">
                   <FontAwesomeIcon icon={faGlobe} className="h-6 w-6" />
                 </div>
-                <div className="font-medium">Cursos gratuitos</div>
+                <div className="font-medium">🌐 Conocimiento global</div>
               </motion.div>
               <motion.div
                 initial="hidden"
@@ -400,7 +409,7 @@ function Home() {
                 <div className="flex items-center justify-center">
                   <FontAwesomeIcon icon={faRankingStar} className="h-6 w-6" />
                 </div>
-                <div className="font-medium">Desarrollo profesional</div>
+                <div className="font-medium">⭐ Impacto positivo</div>
               </motion.div>
               <motion.div
                 initial="hidden"
@@ -416,7 +425,7 @@ function Home() {
                 <div className="flex items-center justify-center">
                   <FontAwesomeIcon icon={faVideo} className="h-6 w-6" />
                 </div>
-                <div className="font-medium">Conferencias</div>
+                <div className="font-medium">🎤 Redes colaborativas</div>
               </motion.div>
               <motion.div
                 initial="hidden"
@@ -432,14 +441,15 @@ function Home() {
                 <div className="flex items-center justify-center">
                   <FontAwesomeIcon icon={faBook} className="h-6 w-6" />
                 </div>
-                <div className="font-medium">Libros y revistas</div>
+                <div className="font-medium">📚 Recursos educativos</div>
               </motion.div>
             </div>
             <Link
               className="btn w-full bg-btnColorSecondary p-5 text-center"
               to="/register"
             >
-              ¡Convierte en miembro ahora!
+              ¡Sé parte del cambio! Contribuye a construir un futuro más justo y
+              sostenible para todos.
             </Link>
           </div>
         </div>

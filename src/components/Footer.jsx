@@ -1,6 +1,5 @@
-import React from "react";
-import Logo from "/logo.svg";
 import { motion } from "framer-motion";
+import React from "react";
 import LogoIeeeFooter from "/ieee_unheval_rgb_u_stacked_w.png";
 const DashFooter = () => {
   return (
@@ -117,7 +116,7 @@ const DashFooter = () => {
           }}
           className="text-center text-colorTextFooter"
         >
-          <p>© 2023 IEEE - Todos los derechos reservados.</p>
+          <p>© 2024 - Patrick Rios - Wilson Figueredo</p>
         </motion.div>
       </footer>
     </div>

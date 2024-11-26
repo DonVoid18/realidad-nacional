@@ -1,9 +1,11 @@
+import { Link, NavLink } from "react-router-dom";
+
+import { motion } from "framer-motion";
 import { useState } from "react";
 import BtnBurger from "./buttonsToggle/BtnBurger";
 import BtnClosed from "./buttonsToggle/BtnClosed";
-import { Link, NavLink } from "react-router-dom";
-import { motion } from "framer-motion";
 import LogoIeee from "/ieee_unheval_rgb_u_stacked_c.png";
+
 const DashHeader = () => {
   const [toggleMenu, setToggleMenu] = useState(false);
   const linkActive = () => {
@@ -55,18 +57,18 @@ const DashHeader = () => {
               <ul className="flex gap-4">
                 <li>
                   <Link className="btn bg-btnColorSecondary" to="/register">
-                    Empieza ya
+                    Comentarios
                   </Link>
                 </li>
-                <li>
+                {/* <li>
                   <a
                     className="btn bg-primary"
                     href="https://www.ieee.org/"
                     target="_blank"
                   >
-                    IEEE Oficial
+                    SISTEMAS
                   </a>
-                </li>
+                </li> */}
               </ul>
             </nav>
           </div>
@@ -112,10 +114,10 @@ const DashHeader = () => {
                     className="btn block bg-btnColorSecondary text-center hover:opacity-70"
                     to="/register"
                   >
-                    Empieza ya
+                    Comentarios
                   </Link>
                 </li>
-                <li>
+                {/* <li>
                   <a
                     className="btn block bg-primary text-center"
                     href="https://www.ieee.org/"
@@ -123,7 +125,7 @@ const DashHeader = () => {
                   >
                     IEEE Oficial
                   </a>
-                </li>
+                </li> */}
               </ul>
             </nav>
           </div>
